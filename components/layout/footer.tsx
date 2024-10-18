@@ -1,5 +1,17 @@
 import Link from 'next/link';
 
+import { Facebook } from 'components/icons/facebook';
+import GitHubIcon from 'components/icons/github';
+import { Instagram } from 'components/icons/instagram';
+import { Linkedin } from 'components/icons/linkedin';
+import { Mail } from 'components/icons/mail';
+import { Mastodon } from 'components/icons/mastodon';
+import { Threads } from 'components/icons/threads';
+import { Tiktok } from 'components/icons/tiktok';
+import { Twitter } from 'components/icons/twitter';
+import { Whatsapp } from 'components/icons/whatsapp';
+import { X } from 'components/icons/x';
+import { Youtube } from 'components/icons/youtube';
 import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/wix';
@@ -37,16 +49,117 @@ export default async function Footer() {
         >
           <FooterMenu menu={menu} />
         </Suspense>
+
         <div className="md:ml-auto">
-          <a
-            className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
-            aria-label="Deploy on Vercel"
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwix%2Fnextjs-commerce&env=COMPANY_NAME,WIX_CLIENT_ID,SITE_NAME,TWITTER_CREATOR,TWITTER_SITE&envDescription=Supply%20the%20Wix%20Client%20ID%20for%20your%20Wix%20Store.&envLink=https%3A%2F%2Fdev.wix.com%2Fdocs%2Fgo-headless%2Fgetting-started%2Fsetup%2Fauthorization%2Fcreate-an-o-auth-app-for-visitors-and-members&demo-title=Wix%20Store%20Demo&demo-description=A%20NextJS%20Commerce%20site%20working%20with%20Wix%20Stores&demo-url=https%3A%2F%2Fwix-nextjs-commerce.vercel.app%2F&demo-image=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F8dfd06_e9c49cd22b95454daac5e46a92bbad79~mv2.png"
-          >
-            <span className="px-3">▲</span>
-            <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
-            <span className="px-3">Deploy</span>
-          </a>
+          <div className="mb-3 flex space-x-4">
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="h-6" />
+            </a>
+
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mastodon className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Threads className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Tiktok className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Whatsapp className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <X className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href="https://github.com/shopware/frontends"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Youtube className="h-6" />
+            </a>
+
+            <a
+              className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
+              aria-label="Deploy on Vercel"
+              href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwix%2Fnextjs-commerce&env=COMPANY_NAME,WIX_CLIENT_ID,SITE_NAME,TWITTER_CREATOR,TWITTER_SITE&envDescription=Supply%20the%20Wix%20Client%20ID%20for%20your%20Wix%20Store.&envLink=https%3A%2F%2Fdev.wix.com%2Fdocs%2Fgo-headless%2Fgetting-started%2Fsetup%2Fauthorization%2Fcreate-an-o-auth-app-for-visitors-and-members&demo-title=Wix%20Store%20Demo&demo-description=A%20NextJS%20Commerce%20site%20working%20with%20Wix%20Stores&demo-url=https%3A%2F%2Fwix-nextjs-commerce.vercel.app%2F&demo-image=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F8dfd06_e9c49cd22b95454daac5e46a92bbad79~mv2.png"
+            >
+              <span className="px-3">▲</span>
+              <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
+              <span className="px-3">Deploy</span>
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
@@ -56,12 +169,13 @@ export default async function Footer() {
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p>
-            <a href="https://github.com/vercel/commerce">View the source</a>
-          </p>
+          <p>Designed in Zimbabwe</p>
           <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-black dark:text-white">
-              Created by ▲ Vercel
+            <a
+              href="https://www.instagram.com/_.p._.r._.o._/"
+              className="text-black dark:text-white"
+            >
+              Created by Pro
             </a>
           </p>
         </div>
