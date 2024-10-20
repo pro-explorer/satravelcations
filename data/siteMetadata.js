@@ -21,7 +21,7 @@ const siteMetadata = {
   threads: 'https://www.threads.net',
   instagram: 'https://www.instagram.com/sa_travelcations_/',
   tiktok: 'https://www.tiktok.com/@satravelcations_',
-  whatsapp: 'https://wa.me/2778 685 5680',
+  whatsapp: 'https://wa.me/27786855680',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
