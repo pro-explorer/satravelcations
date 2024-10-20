@@ -8,7 +8,6 @@ import { Mail } from 'components/icons/mail';
 import { Mastodon } from 'components/icons/mastodon';
 import { Threads } from 'components/icons/threads';
 import { Tiktok } from 'components/icons/tiktok';
-import { Twitter } from 'components/icons/twitter';
 import { Whatsapp } from 'components/icons/whatsapp';
 import { X } from 'components/icons/x';
 import { Youtube } from 'components/icons/youtube';
@@ -119,14 +118,7 @@ export default async function Footer() {
             >
               <Tiktok className="h-6" />
             </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter className="h-6" />
-            </a>
+         
             <a
               aria-label="Github Repository"
               href={siteMetadata.whatsapp}
