@@ -88,12 +88,13 @@ export default async function Footer() {
             </a>
             <a
               aria-label="Github Repository"
-              href={siteMetadata.mail}
+              href={'mailto:' + siteMetadata.email}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Mail className="h-6" />
             </a>
+
             <a
               aria-label="Github Repository"
               href={siteMetadata.mastodon}
