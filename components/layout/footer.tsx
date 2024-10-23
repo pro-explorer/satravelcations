@@ -1,11 +1,8 @@
 import Link from 'next/link';
 
 import { Facebook } from 'components/icons/facebook';
-import GitHubIcon from 'components/icons/github';
 import { Instagram } from 'components/icons/instagram';
-import { Linkedin } from 'components/icons/linkedin';
 import { Mail } from 'components/icons/mail';
-import { Mastodon } from 'components/icons/mastodon';
 import { Threads } from 'components/icons/threads';
 import { Tiktok } from 'components/icons/tiktok';
 import { Whatsapp } from 'components/icons/whatsapp';
@@ -60,15 +57,6 @@ export default async function Footer() {
             >
               <Facebook className="h-6" />
             </a>
-
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitHubIcon className="h-6" />
-            </a>
             <a
               aria-label="Github Repository"
               href={siteMetadata.instagram}
@@ -77,14 +65,7 @@ export default async function Footer() {
             >
               <Instagram className="h-6" />
             </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="h-6" />
-            </a>
+
             <a
               aria-label="Github Repository"
               href={'mailto:' + siteMetadata.email}
@@ -94,14 +75,6 @@ export default async function Footer() {
               <Mail className="h-6" />
             </a>
 
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.mastodon}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Mastodon className="h-6" />
-            </a>
             <a
               aria-label="Github Repository"
               href={siteMetadata.threads}
@@ -118,7 +91,7 @@ export default async function Footer() {
             >
               <Tiktok className="h-6" />
             </a>
-         
+
             <a
               aria-label="Github Repository"
               href={siteMetadata.whatsapp}
