@@ -66,7 +66,7 @@ const Hero = () => {
             <span className="bg-primary-600 mr-3 rounded-full px-4 py-1.5 text-xs text-white">
               New
             </span>{' '}
-            <span className="text-sm font-medium"> See what's new</span>
+            <span className="text-sm font-medium">See what's new</span>
             <svg
               className="ml-2 h-5 w-5"
               fill="currentColor"
