@@ -26,12 +26,6 @@ export default async function Footer() {
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
-        <div>
-          <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
-            <LogoSquare size="sm" />
-            <span className="uppercase">{SITE_NAME}</span>
-          </Link>
-        </div>
         <Suspense
           fallback={
             <div className="flex h-[188px] w-[200px] flex-col gap-2">
@@ -47,76 +41,15 @@ export default async function Footer() {
           <FooterMenu menu={menu} />
         </Suspense>
 
+        <div>
+          <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
+            <LogoSquare size="sm" />
+            <span className="uppercase">{SITE_NAME}</span>
+          </Link>
+        </div>
+
         <div className="md:ml-auto">
-          <div className="mb-3 flex space-x-4">
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Facebook className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram className="h-6" />
-            </a>
-
-            <a
-              aria-label="Github Repository"
-              href={'mailto:' + siteMetadata.email}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Mail className="h-6" />
-            </a>
-
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.threads}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Threads className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Tiktok className="h-6" />
-            </a>
-
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Whatsapp className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.x}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <X className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Youtube className="h-6" />
-            </a>
-          </div>
+          <div className="mb-3 flex space-x-4"> </div>
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
@@ -127,14 +60,77 @@ export default async function Footer() {
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>Designed in Zimbabwe</p>
-          <p className="md:ml-auto">
-            <a
-              href="https://www.instagram.com/_.p._.r._.o._/"
-              className="text-black dark:text-white"
-            >
-              Created by Pro
-            </a>
-          </p>
+          <div className="md:ml-auto">
+            <div className="mb-3 flex space-x-4">
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="h-6" />
+              </a>
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-6" />
+              </a>
+
+              <a
+                aria-label="Github Repository"
+                href={'mailto:' + siteMetadata.email}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Mail className="h-6" />
+              </a>
+
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.threads}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Threads className="h-6" />
+              </a>
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Tiktok className="h-6" />
+              </a>
+
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Whatsapp className="h-6" />
+              </a>
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.x}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <X className="h-6" />
+              </a>
+              <a
+                aria-label="Github Repository"
+                href={siteMetadata.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="h-6" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
