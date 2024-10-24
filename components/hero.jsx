@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
           <a
             href="/search?sort=latest-desc"
-            className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+            className="mb-7 inline-flex animate-bounce items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
             role="alert"
           >
             <span className="bg-primary-600 mr-3 rounded-full px-4 py-1.5 text-xs text-white">
@@ -80,10 +80,10 @@ const Hero = () => {
               />
             </svg>
           </a>
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 animate-pulse text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl">
             Let's take a tour Cape Town!
           </h1>
-          <p className="mb-8 text-lg font-normal sm:px-16 lg:text-xl xl:px-48">
+          <p className="mb-8 animate-pulse text-lg font-normal sm:px-16 lg:text-xl xl:px-48">
             Tailor-made Travel Experiences for You. Experience the art of luxury travel with
             expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!
           </p>
@@ -109,7 +109,7 @@ const Hero = () => {
             </a>
             <a
               href="/search"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex animate-pulse items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               <svg
                 className="-ml-1 mr-2 h-5 w-5"
