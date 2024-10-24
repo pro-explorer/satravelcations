@@ -84,7 +84,7 @@ export default async function Footer() {
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p>Designed in Zimbabwe</p>
+          <p>Designed in Pro</p>
           <div className="md:ml-auto">
             <div className="mb-3 flex space-x-4">
               <a
