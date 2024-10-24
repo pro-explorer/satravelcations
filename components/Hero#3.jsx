@@ -54,18 +54,19 @@ tailwind.config = {
 
 const Hero = () => {
   return (
-    <>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+    <div className="relative -mt-2 h-[600px] bg-[url('https://images.pexels.com/photos/29030845/pexels-photo-29030845/free-photo-of-stunning-view-of-durdle-door-beach-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-fixed bg-center">
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <section className="absolute inset-0 flex flex-col px-8 py-8 text-slate-50 sm:px-16">
+        <div className="mx-auto w-full max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
           <a
-            href="#"
+            href="/search?sort=latest-desc"
             className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
             role="alert"
           >
             <span className="bg-primary-600 mr-3 rounded-full px-4 py-1.5 text-xs text-white">
               New
             </span>{' '}
-            <span className="text-sm font-medium">APP is out! See what's new</span>
+            <span className="text-sm font-medium">Packages! See what's new</span>
             <svg
               className="ml-2 h-5 w-5"
               fill="currentColor"
@@ -79,13 +80,14 @@ const Hero = () => {
               />
             </svg>
           </a>
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            We invest in the world’s potential
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl">
+            Let's take a tour Cape Town!
           </h1>
-          <p className="mb-8 text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48 dark:text-gray-400">
-            Here at APP we focus on markets where technology, innovation, and capital can unlock
-            long-term value and drive economic growth.
+          <p className="mb-8 text-lg font-normal sm:px-16 lg:text-xl xl:px-48">
+            Tailor-made Travel Experiences for You. Experience the art of luxury travel with
+            expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!
           </p>
+
           <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
             <a
               href="#"
@@ -227,7 +229,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
