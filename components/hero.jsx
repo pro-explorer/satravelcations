@@ -91,7 +91,7 @@ const Hero = () => {
           <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
             <a
               href="/about"
-              className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4"
+              className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 inline-flex animate-pulse items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4"
             >
               Learn more
               <svg
@@ -109,7 +109,7 @@ const Hero = () => {
             </a>
             <a
               href="/search"
-              className="inline-flex animate-pulse items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex animate-blink items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               <svg
                 className="-ml-1 mr-2 h-5 w-5"
