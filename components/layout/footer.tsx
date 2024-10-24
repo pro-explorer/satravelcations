@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import { Facebook } from 'components/icons/facebook';
 import { Instagram } from 'components/icons/instagram';
-import { Mail } from 'components/icons/mail';
 import { Threads } from 'components/icons/threads';
 import { Tiktok } from 'components/icons/tiktok';
 import { Whatsapp } from 'components/icons/whatsapp';
@@ -102,15 +101,6 @@ export default async function Footer() {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-6" />
-              </a>
-
-              <a
-                aria-label="Github Repository"
-                href={'mailto:' + siteMetadata.email}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mail className="h-6" />
               </a>
 
               <a
