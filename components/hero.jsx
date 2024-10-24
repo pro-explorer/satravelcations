@@ -54,7 +54,7 @@ tailwind.config = {
 
 const Hero = () => {
   return (
-    <section className="relative -mt-2 h-[460px] bg-[url('https://images.pexels.com/photos/29030845/pexels-photo-29030845/free-photo-of-stunning-view-of-durdle-door-beach-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-fixed bg-center">
+    <section className="relative -mt-2 h-[480px] bg-[url('https://images.pexels.com/photos/29030845/pexels-photo-29030845/free-photo-of-stunning-view-of-durdle-door-beach-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-fixed bg-center">
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex flex-col px-8 py-8 text-slate-50 sm:px-16">
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">

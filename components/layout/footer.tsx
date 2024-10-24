@@ -40,16 +40,41 @@ export default async function Footer() {
         >
           <FooterMenu menu={menu} />
         </Suspense>
+        <Suspense
+          fallback={
+            <div className="flex h-[188px] w-[200px] flex-col gap-2">
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+            </div>
+          }
+        >
+          <FooterMenu menu={menu} />
+        </Suspense>
+
+        <Suspense
+          fallback={
+            <div className="flex h-[188px] w-[200px] flex-col gap-2">
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+              <div className={skeleton} />
+            </div>
+          }
+        >
+          <FooterMenu menu={menu} />
+        </Suspense>
 
         <div>
           <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
             <LogoSquare size="sm" />
             <span className="uppercase">{SITE_NAME}</span>
           </Link>
-        </div>
-
-        <div className="md:ml-auto">
-          <div className="mb-3 flex space-x-4"> </div>
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
