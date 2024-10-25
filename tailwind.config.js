@@ -30,9 +30,15 @@ module.exports = {
         carousel: 'marquee 60s linear infinite',
         blink: 'blink 1.4s both infinite'
       },
+
       colors: {
         primary: colors.blue,
         gray: colors.gray
+      },
+      zIndex: {
+        60: '60',
+        70: '70',
+        80: '80'
       }
     }
   },
