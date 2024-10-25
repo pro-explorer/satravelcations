@@ -7,6 +7,7 @@ import { getCart } from 'lib/wix';
 import { ReactNode } from 'react';
 import { Toaster } from 'sonner';
 import './globals.css';
+import { ThemeProviders } from './theme-providers';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
@@ -27,12 +28,12 @@ export const metadata = {
   },
   ...(twitterCreator &&
     twitterSite && {
-    twitter: {
-      card: 'summary_large_image',
-      creator: twitterCreator,
-      site: twitterSite
-    }
-  })
+      twitter: {
+        card: 'summary_large_image',
+        creator: twitterCreator,
+        site: twitterSite
+      }
+    })
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
@@ -41,15 +42,19 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
   return (
     <html lang="en" className={GeistSans.variable}>
+      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
-        <CartProvider cartPromise={cart}>
-          <Navbar />
-          <main>
-            {children}
-            <Toaster closeButton />
-            <WelcomeToast />
-          </main>
-        </CartProvider>
+        <ThemeProviders>
+          <CartProvider cartPromise={cart}>
+            <Navbar />
+            <main>
+              {children}
+              <Toaster closeButton />
+              <WelcomeToast />
+            </main>
+          </CartProvider>
+        </ThemeProviders>
       </body>
     </html>
   );

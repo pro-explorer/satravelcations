@@ -9,7 +9,7 @@ import { Whatsapp } from 'components/icons/whatsapp';
 import { X } from 'components/icons/x';
 import { Youtube } from 'components/icons/youtube';
 import FooterMenu from 'components/layout/footer-menu';
-import LogoSquare from 'components/logo-square';
+import ThemeSwitch from 'components/ThemeSwitch';
 import siteMetadata from 'data/siteMetadata';
 import { getMenu } from 'lib/wix';
 import { Suspense } from 'react';
@@ -73,11 +73,7 @@ export default async function Footer() {
         </div>
 
         <div>
-          <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
-            <LogoSquare size="sm" />
-            <span className="uppercase">{SITE_NAME}</span>
-          </Link>
-          {/*Theme toggle button */}
+          <ThemeSwitch />
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
