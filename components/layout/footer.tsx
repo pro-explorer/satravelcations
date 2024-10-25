@@ -73,7 +73,66 @@ export default async function Footer() {
         </div>
 
         <div className="md:ml-auto">
-          <ThemeSwitch />
+          <div className="mb-3 flex space-x-4">
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="h-6" />
+            </a>
+
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.threads}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Threads className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Tiktok className="h-6" />
+            </a>
+
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Whatsapp className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.x}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <X className="h-6" />
+            </a>
+            <a
+              aria-label="Github Repository"
+              href={siteMetadata.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Youtube className="h-6" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
@@ -84,67 +143,9 @@ export default async function Footer() {
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>Designed by Pro</p>
+
           <div className="md:ml-auto">
-            <div className="mb-3 flex space-x-4">
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="h-6" />
-              </a>
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="h-6" />
-              </a>
-
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.threads}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Threads className="h-6" />
-              </a>
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Tiktok className="h-6" />
-              </a>
-
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Whatsapp className="h-6" />
-              </a>
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.x}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <X className="h-6" />
-              </a>
-              <a
-                aria-label="Github Repository"
-                href={siteMetadata.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Youtube className="h-6" />
-              </a>
-            </div>
+            <ThemeSwitch />
           </div>
         </div>
       </div>
