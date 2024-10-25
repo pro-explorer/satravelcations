@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import clsx from 'clsx';
 import { Facebook } from 'components/icons/facebook';
 import { Instagram } from 'components/icons/instagram';
 import { Threads } from 'components/icons/threads';
@@ -25,43 +26,57 @@ export default async function Footer() {
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
-        <Suspense
-          fallback={
-            <div className="flex h-[188px] w-[200px] flex-col gap-2">
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-            </div>
-          }
-        >
-          <FooterMenu menu={menu} />
-        </Suspense>
+        <div>
+          <h2 className="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">
+            Quick Links
+          </h2>
+          <Suspense
+            fallback={
+              <div className="flex h-[188px] w-[200px] flex-col gap-2">
+                <div className={skeleton} />
+                <div className={skeleton} />
+                <div className={skeleton} />
+                <div className={skeleton} />
+                <div className={skeleton} />
+                <div className={skeleton} />
+              </div>
+            }
+          >
+            <FooterMenu menu={menu} />
+          </Suspense>
+        </div>
 
-        <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+        <div>
           <h2 className="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">
             Contact Details
           </h2>
-          <nav className="mb-10 list-none">
-            <li>
-              Tel :
-              <a className="hover:text-gray-800 md:inline-block" href={`tel:${siteMetadata.phone}`}>
-                {' '}
-                {siteMetadata.phone}
-              </a>
-            </li>
-            <li>
-              Email :
-              <a
-                className="hover:text-gray-800 md:inline-block"
-                href={`mailto::${siteMetadata.email}`}
-              >
-                {' '}
-                {siteMetadata.email}
-              </a>
-            </li>
+          <nav className="">
+            <ul>
+              <li>
+                Tel :
+                <Link
+                  href={`tel:${siteMetadata.phone}`}
+                  className={clsx(
+                    'block p-2 text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
+                  )}
+                >
+                  {' '}
+                  {siteMetadata.phone}
+                </Link>
+              </li>
+              <li>
+                Email :
+                <Link
+                  href={`mailto:${siteMetadata.email}`}
+                  className={clsx(
+                    'block p-2 text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
+                  )}
+                >
+                  {' '}
+                  {siteMetadata.email}
+                </Link>
+              </li>
+            </ul>
           </nav>
         </div>
 
@@ -70,6 +85,8 @@ export default async function Footer() {
             <LogoSquare size="sm" />
             <span className="uppercase">{SITE_NAME}</span>
           </Link>
+
+          {/*Theme toggle button */}
         </div>
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
