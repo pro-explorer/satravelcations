@@ -72,7 +72,8 @@ export default async function Footer() {
           </nav>
         </div>
 
-        <div className="md:ml-auto">
+        <div>
+          <h2 className="mb-3 text-lg font-bold tracking-widest">Socials</h2>
           <div className="mb-3 flex space-x-4">
             <a
               aria-label="Github Repository"
