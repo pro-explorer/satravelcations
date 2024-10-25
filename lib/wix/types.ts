@@ -80,7 +80,6 @@ export type Page = {
   routeName?: string;
   foreignKey?: string;
   type: string;
-  children: Page[];
   //originalCmsPage?: Schemas['CmsPage'];
 };
 
@@ -124,4 +123,29 @@ export type ProductVariant = {
 export type SEO = {
   title: string;
   description: string;
+};
+
+///WIX DATA TYPES
+export type WixPage = {
+  id: string;
+  title: string;
+  slug: string;
+  body: string;
+  bodySummary: string;
+  seo?: SEO;
+  createdAt: string;
+  updatedAt: string;
+  routeName?: string;
+  foreignKey?: string;
+  type: string;
+  children: WixPage[];
+  //originalCmsPage?: Schemas['CmsPage'];
+};
+
+export type WixMenu = {
+  id: string;
+  title: string;
+  path: string;
+  type: string;
+  children: WixMenu[];
 };
