@@ -23,6 +23,7 @@ const siteMetadata = {
   tiktok: 'https://www.tiktok.com/@satravelcations_',
   whatsapp: 'https://wa.me/27786855680',
   locale: 'en-US',
+  phone: '+27786855680',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
   analytics: {

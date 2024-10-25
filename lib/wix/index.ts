@@ -349,7 +349,8 @@ export async function getMenu(handle: string): Promise<Menu[]> {
   return (
     menu?.data!.pages.map((page: { title: string; slug: string }) => ({
       title: page.title,
-      path: '/' + page.slug
+      path: '/' + page.slug,
+      children: []
     })) || []
   );
 }

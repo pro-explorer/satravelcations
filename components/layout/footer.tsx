@@ -39,35 +39,31 @@ export default async function Footer() {
         >
           <FooterMenu menu={menu} />
         </Suspense>
-        <Suspense
-          fallback={
-            <div className="flex h-[188px] w-[200px] flex-col gap-2">
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-            </div>
-          }
-        >
-          <FooterMenu menu={menu} />
-        </Suspense>
 
-        <Suspense
-          fallback={
-            <div className="flex h-[188px] w-[200px] flex-col gap-2">
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-            </div>
-          }
-        >
-          <FooterMenu menu={menu} />
-        </Suspense>
+        <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+          <h2 className="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">
+            Contact Details
+          </h2>
+          <nav className="mb-10 list-none">
+            <li>
+              Tel :
+              <a className="hover:text-gray-800 md:inline-block" href={`tel:${siteMetadata.phone}`}>
+                {' '}
+                {siteMetadata.phone}
+              </a>
+            </li>
+            <li>
+              Email :
+              <a
+                className="hover:text-gray-800 md:inline-block"
+                href={`mailto::${siteMetadata.email}`}
+              >
+                {' '}
+                {siteMetadata.email}
+              </a>
+            </li>
+          </nav>
+        </div>
 
         <div>
           <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
