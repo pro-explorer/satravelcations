@@ -1,5 +1,5 @@
 import { genPageMetadata } from 'app/seo';
-import Card from 'components/Card';
+import Card from 'components/card';
 import projectsData from 'data/projectsData';
 
 export const metadata = genPageMetadata({ title: 'Blogs' });
