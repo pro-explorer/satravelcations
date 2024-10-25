@@ -1,5 +1,6 @@
 import { CartProvider } from 'components/cart/cart-context';
 import { Navbar } from 'components/layout/navbar';
+import ScrollToTopButton from 'components/scroll-to-top-button';
 import { WelcomeToast } from 'components/welcome-toast';
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from 'lib/utils';
@@ -45,6 +46,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <ScrollToTopButton />
         <ThemeProviders>
           <CartProvider cartPromise={cart}>
             <Navbar />
