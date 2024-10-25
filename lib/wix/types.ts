@@ -60,10 +60,8 @@ export type Image = {
   height: number;
 };
 
-export type Menu = {
-  title: string;
-  path: string;
-};
+// /** Vercel Commerce Types */
+export type Menu = { id: string; title: string; path: string; type: string; children: Menu[] };
 
 export type Money = {
   amount: string;
@@ -79,6 +77,11 @@ export type Page = {
   seo?: SEO;
   createdAt: string;
   updatedAt: string;
+  routeName?: string;
+  foreignKey?: string;
+  type: string;
+  children: Page[];
+  //originalCmsPage?: Schemas['CmsPage'];
 };
 
 export type Product = {
