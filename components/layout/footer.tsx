@@ -53,7 +53,7 @@ export default async function Footer() {
                 <Link
                   href={`tel:${siteMetadata.phone}`}
                   className={clsx(
-                    'block p-2 text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
+                    'block p-2 text-sm underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
                   )}
                 >
                   {' '}
@@ -65,7 +65,7 @@ export default async function Footer() {
                 <Link
                   href={`mailto:${siteMetadata.email}`}
                   className={clsx(
-                    'block p-2 text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
+                    'text-lm block p-2 underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
                   )}
                 >
                   {' '}
