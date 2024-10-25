@@ -390,7 +390,9 @@ export async function getPage(handle: string): Promise<Page | undefined> {
       title: page.data!.seoTitle,
       description: page.data!.seoDescription
     },
-    updatedAt: page.data!._updatedDate.$date
+    updatedAt: page.data!._updatedDate.$date,
+    type: '',
+    children: []
   };
 }
 
@@ -423,7 +425,9 @@ export async function getPages(): Promise<Page[]> {
       title: item.data!.seoTitle,
       description: item.data!.seoDescription
     },
-    updatedAt: item.data!._updatedDate.$date
+    updatedAt: item.data!._updatedDate.$date,
+    type: '',
+    children: []
   }));
 }
 
