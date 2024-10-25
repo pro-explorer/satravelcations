@@ -72,7 +72,7 @@ export default async function Footer() {
           </nav>
         </div>
 
-        <div>
+        <div className="md:ml-auto">
           <ThemeSwitch />
         </div>
       </div>
