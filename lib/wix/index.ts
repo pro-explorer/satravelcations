@@ -391,8 +391,7 @@ export async function getPage(handle: string): Promise<Page | undefined> {
       description: page.data!.seoDescription
     },
     updatedAt: page.data!._updatedDate.$date,
-    type: '',
-    children: []
+    type: ''
   };
 }
 
