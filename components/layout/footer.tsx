@@ -49,27 +49,23 @@ export default async function Footer() {
           <nav className="">
             <ul>
               <li>
-                Tel :
                 <Link
                   href={`tel:${siteMetadata.phone}`}
                   className={clsx(
                     'block p-2 text-sm underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
                   )}
                 >
-                  {' '}
-                  {siteMetadata.phone}
+                  Tel : {siteMetadata.phone}
                 </Link>
               </li>
               <li>
-                Email :
                 <Link
                   href={`mailto:${siteMetadata.email}`}
                   className={clsx(
                     'text-lm block p-2 underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
                   )}
                 >
-                  {' '}
-                  {siteMetadata.email}
+                  Email : {siteMetadata.email}
                 </Link>
               </li>
             </ul>
