@@ -1,14 +1,8 @@
 import Link from 'next/link';
 
 import clsx from 'clsx';
-import { Facebook } from 'components/icons/facebook';
-import { Instagram } from 'components/icons/instagram';
-import { Threads } from 'components/icons/threads';
-import { Tiktok } from 'components/icons/tiktok';
-import { Whatsapp } from 'components/icons/whatsapp';
-import { X } from 'components/icons/x';
-import { Youtube } from 'components/icons/youtube';
 import FooterMenu from 'components/layout/footer-menu';
+import SocialIcon from 'components/social-icons';
 import ThemeSwitch from 'components/theme-switch';
 import siteMetadata from 'data/siteMetadata';
 import { getMenu } from 'lib/wix';
@@ -46,7 +40,7 @@ export default async function Footer() {
 
         <div>
           <h2 className="mb-3 text-lg font-bold tracking-widest">Contact Details</h2>
-          <nav className="">
+          <nav>
             <ul>
               <li>
                 <Link
@@ -71,68 +65,17 @@ export default async function Footer() {
             </ul>
           </nav>
         </div>
-
+        <div className="mb-3 flex space-x-4"></div>
         <div>
           <h2 className="mb-3 text-lg font-bold tracking-widest">Socials</h2>
           <div className="mb-3 flex space-x-4">
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Facebook className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram className="h-6" />
-            </a>
-
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.threads}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Threads className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Tiktok className="h-6" />
-            </a>
-
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Whatsapp className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.x}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <X className="h-6" />
-            </a>
-            <a
-              aria-label="Github Repository"
-              href={siteMetadata.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Youtube className="h-6" />
-            </a>
+            <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
+            <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
+            <SocialIcon kind="x" href={siteMetadata.x} size={6} />
+            <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
+            <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
+            <SocialIcon kind="tiktok" href={siteMetadata.tiktok} size={6} />
+            <SocialIcon kind="whatsapp" href={siteMetadata.whatsapp} size={6} />
           </div>
         </div>
       </div>
