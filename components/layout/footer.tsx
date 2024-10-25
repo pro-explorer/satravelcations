@@ -65,7 +65,7 @@ export default async function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="mb-3 flex space-x-4"></div>
+
         <div>
           <h2 className="mb-3 text-lg font-bold tracking-widest">Socials</h2>
           <div className="mb-3 flex space-x-4">
