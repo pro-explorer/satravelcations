@@ -10,7 +10,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { redirectToCheckout } from './actions';
 import { useCart } from './cart-context';
 import CloseCart from './close-cart';
 import { DeleteItemButton } from './delete-item-button';
@@ -190,7 +189,13 @@ export default function CartModal() {
                       />
                     </div>
                   </div>
-                  <form action={redirectToCheckout}>
+                  <form
+                    method="post"
+                    action={
+                      // redirectToCheckout
+                      'https://wa.me/27786855680?text=pro'
+                    }
+                  >
                     <CheckoutButton />
                   </form>
                 </div>
