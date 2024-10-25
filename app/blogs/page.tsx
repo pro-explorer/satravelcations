@@ -26,8 +26,8 @@ export default function Blogs() {
                 key={d.title}
                 title={d.title}
                 description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
+                imgSrc="{d.imgSrc}"
+                href="{d.href}"
               />
             ))}
           </div>
