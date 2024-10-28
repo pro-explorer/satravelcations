@@ -67,7 +67,7 @@ export default async function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-3 text-lg font-bold tracking-widest">Socials</h2>
+          <h2 className="mb-3 text-lg font-bold tracking-widest">Social</h2>
           <div className="mb-3 flex space-x-4">
             <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
             <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
