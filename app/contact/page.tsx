@@ -113,7 +113,8 @@ export default function ContactPage() {
               />
               {errors.name && (
                 <div className="mt-1 text-red-600">
-                  <small>{errors.name.message}</small>
+                  {/* <small>{errors.name.message}</small> */}
+                  
                 </div>
               )}
             </div>
@@ -143,7 +144,7 @@ export default function ContactPage() {
               />
               {errors.email && (
                 <div className="mt-1 text-red-600">
-                  <small>{errors.email.message}</small>
+                  {/* <small>{errors.email.message}</small> */}
                 </div>
               )}
             </div>
@@ -176,7 +177,7 @@ export default function ContactPage() {
               />
               {errors.phone&& (
                 <div className="mt-1 text-red-600">
-                  <small>{errors.phone.message}</small>
+                  {/* <small>{errors.phone.message}</small> */}
                 </div>
               )}
             </div>
@@ -199,7 +200,7 @@ export default function ContactPage() {
               {errors.message && (
                 <div className="mt-1 text-red-600">
                   {" "}
-                  <small>{errors.message.message}</small>
+                  {/* <small>{errors.message.message}</small> */}
                 </div>
               )}
             </div>
