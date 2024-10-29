@@ -61,7 +61,7 @@ export default function Contact() {
 
       <div className="my-10 grid md:grid-cols-2">
         <div className="my-10">
-          <h2 className="text-2xl font-semibold dark:text-white">Contact SATravelcations</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">Contact SA Travelcations</h2>
           <p className="mt-5 max-w-sm">
             Have something to say? We are here to help. Fill up the form or send an email or call
             us.
