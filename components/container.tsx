@@ -1,6 +1,7 @@
+import { AwaitedReactNode, JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from "react";
 import { cx } from "utils/all";
 
-export default function Container(props) {
+export default function Container(props: { large: any; alt: any; className: any; children: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; }) {
   return (
     <div
       className={cx(
