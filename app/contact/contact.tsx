@@ -2,6 +2,7 @@
 
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import useWeb3Forms from '@web3forms/react';
+import Layout from 'app/[page]/layout';
 import siteMetadata from 'data/siteMetadata';
 import { useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
@@ -50,7 +51,7 @@ export default function Contact() {
   };
 
   return (
-    <>
+    <Layout>
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
         Contact
       </h1>
@@ -208,6 +209,6 @@ export default function Contact() {
           )}
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
