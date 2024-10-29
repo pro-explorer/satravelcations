@@ -2,7 +2,6 @@
 
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import useWeb3Forms from '@web3forms/react';
-import Container from 'components/container';
 import siteMetadata from 'data/siteMetadata';
 import { useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
@@ -51,7 +50,7 @@ export default function Contact() {
   };
 
   return (
-    <Container>
+    <>
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
         Contact
       </h1>
@@ -70,7 +69,7 @@ export default function Contact() {
           <div className="mt-5">
             <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
               <MapPinIcon className="h-4 w-4" />
-              <span>Cape Town, 8001 South Africa</span>
+              <span>Cape Town, South Africa</span>
             </div>
             {siteMetadata?.email && (
               <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
@@ -209,6 +208,6 @@ export default function Contact() {
           )}
         </div>
       </div>
-    </Container>
+    </>
   );
 }
