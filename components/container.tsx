@@ -1,29 +1,16 @@
-import { ReactNode } from 'react';
 import { cx } from 'utils/all';
 
-interface ContainerProps {
-  children: ReactNode;
-  large?: boolean;
-  alt?: boolean;
-  className?: string;
-}
-
-export default function Container({
-  children,
-  large = false,
-  alt = false,
-  className = ''
-}: ContainerProps) {
+export default function Container(props: any) {
   return (
     <div
       className={cx(
         'container mx-auto px-8 xl:px-5',
-        large ? 'max-w-screen-xl' : 'max-w-screen-lg',
-        !alt && 'py-5 lg:py-8',
-        className
+        props.large ? 'max-w-screen-xl' : 'max-w-screen-lg',
+        !props.alt && 'py-5 lg:py-8',
+        props.className
       )}
     >
-      {children}
+      {props.children}
     </div>
   );
 }
