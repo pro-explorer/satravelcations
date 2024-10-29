@@ -70,7 +70,7 @@ export default function Contact() {
           <div className="mt-5">
             <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
               <MapPinIcon className="h-4 w-4" />
-              <span>Cape Town</span>
+              <span>Cape Town, 8001 South Africa</span>
             </div>
             {siteMetadata?.email && (
               <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
