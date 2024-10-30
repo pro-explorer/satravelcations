@@ -67,12 +67,14 @@ const Page = async ({ params: { slug } }: { params: Params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <>
       <div className="mx-auto px-5">
-        {/* <Header /> */}
         <BlogPostContent post={result.post} />
         <RelatedPosts posts={posts} />
-        <Footer />
       </div>
+      <Footer />
+      </>
+      
     </>
   );
 };

@@ -27,8 +27,7 @@ export default async function Page() {
 
   return (
     <>
-     <div className="mx-auto max-w-screen-2xl px-4">
-
+     <div className="mx-auto px-5">
       <div className="mt-20 mb-12 text-center">
         <h1 className="mb-2 text-5xl font-bold">Tags</h1>
         <p className="text-lg opacity-50">List of all tags</p>
@@ -47,6 +46,5 @@ export default async function Page() {
     </div>
     <Footer />
     </>
-   
   );
 }
