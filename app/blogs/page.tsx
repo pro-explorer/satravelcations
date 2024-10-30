@@ -11,11 +11,9 @@ const Page = async ({
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
   const result = await wisp.getPosts({ limit: 6, page });
   return (
-    <div className="mx-auto px-5 mb-10">
-      {/* <Header /> */}
+    <div className="mx-auto max-w-screen-2xl px-4">
       <BlogPostsPreview posts={result.posts} />
       <BlogPostsPagination pagination={result.pagination} />
-
     </div>
   );
 };
