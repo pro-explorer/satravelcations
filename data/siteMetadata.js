@@ -24,6 +24,8 @@ const siteMetadata = {
   whatsapp: 'https://wa.me/27786855680',
   locale: 'en-US',
   phone: '+27786855680',
+  address:"Cape Town, South Africa",
+  map_address:"https://maps.app.goo.gl/bxif8WY81zrXgj2E9",
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
   analytics: {
