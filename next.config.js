@@ -6,7 +6,17 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'static.wixstatic.com'
-      }
-    ]
-  }
+      },
+
+       {
+        protocol: "https",
+        hostname: "imagedelivery.net",
+      },
+    ],
+
+  
+  },
+  redirects: async () => {
+    return [];
+  },
 };

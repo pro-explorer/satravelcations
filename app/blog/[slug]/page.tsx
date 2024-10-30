@@ -1,5 +1,4 @@
 import { BlogPostContent } from "components/BlogPostContent";
-import Footer from "components/layout/footer";
 //import  Header  from "components/layout/navbar/index";
 import { RelatedPosts } from "components/RelatedPosts";
 import { config } from "config";
@@ -67,13 +66,13 @@ const Page = async ({ params: { slug } }: { params: Params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <>
+      
       <div className="mx-auto px-5">
         <BlogPostContent post={result.post} />
         <RelatedPosts posts={posts} />
       </div>
-      <Footer />
-      </>
+      
+  
       
     </>
   );
