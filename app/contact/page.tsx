@@ -44,11 +44,7 @@ export default function ContactPage() {
   });
 
   return (
-    <div
-    
-    className=
-      "container px-8 mx-auto xl:px-5"
-      >
+    <div className= "container px-8 mx-auto xl:px-5">
       <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
         Contact
       </h1>
