@@ -12,6 +12,7 @@ const Page = async ({
   const result = await wisp.getPosts({ limit: 6, page });
   return (
     <>
+    <h1 className="mb-8 text-5xl font-bold">Blog</h1>
       <BlogPostsPreview posts={result.posts} />
       <BlogPostsPagination pagination={result.pagination} />
     </>
