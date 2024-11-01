@@ -349,8 +349,7 @@ export async function getMenu(handle: string): Promise<Menu[]> {
   return (
     menu?.data!.pages.map((page: { title: string; slug: string }) => ({
       title: page.title,
-      path: '/' + page.slug,
-      children: []
+      path: '/' + page.slug
     })) || []
   );
 }
@@ -391,8 +390,7 @@ export async function getPage(handle: string): Promise<Page | undefined> {
       title: page.data!.seoTitle,
       description: page.data!.seoDescription
     },
-    updatedAt: page.data!._updatedDate.$date,
-    type: ''
+    updatedAt: page.data!._updatedDate.$date
   };
 }
 
@@ -425,9 +423,7 @@ export async function getPages(): Promise<Page[]> {
       title: item.data!.seoTitle,
       description: item.data!.seoDescription
     },
-    updatedAt: item.data!._updatedDate.$date,
-    type: '',
-    children: []
+    updatedAt: item.data!._updatedDate.$date
   }));
 }
 
