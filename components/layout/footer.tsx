@@ -82,8 +82,8 @@ export default async function Footer() {
           <div className="mb-3 flex space-x-4">
             <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
                <SocialIcon kind="tiktok" href={siteMetadata.tiktok} size={6} />
+               <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
             <SocialIcon kind="whatsapp" href={siteMetadata.whatsapp} size={6} />
-            <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
             <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
             <SocialIcon kind="x" href={siteMetadata.x} size={6} />
             <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
