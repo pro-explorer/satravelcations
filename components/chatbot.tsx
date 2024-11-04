@@ -12,9 +12,10 @@ export default function Chatbot() {
         src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
         strategy="lazyOnload"
       />
+      
 
 <Script
-        src="https://files.bpcontent.cloud/2024/11/04/08/20241104081837-N7QPTJZ6.js"
+        src="https://files.bpcontent.cloud/2024/11/04/08/20241104084846-LTXLMEGA.js"
         strategy="lazyOnload"
       />
     </>
