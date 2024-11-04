@@ -1,29 +1,20 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    embeddedChatbotConfig: {
-      chatbotId: string;
-      domain: string;
-    };
-  }
-}
 
 export default function Chatbot() {
-  useEffect(() => {
-    window.embeddedChatbotConfig = {
-      chatbotId: "17n0C2zSwi828jz1DbxIr",
-      domain: "www.chatbase.co",
-    };
-  }, []);
+
 
   return (
     <>
       <Script
-        src="https://www.chatbase.co/embed.min.js"
+        src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
+        strategy="lazyOnload"
+      />
+
+<Script
+        src="https://files.bpcontent.cloud/2024/11/04/08/20241104081837-N7QPTJZ6.js"
         strategy="lazyOnload"
       />
     </>
