@@ -25,10 +25,10 @@ export default function ScrollToTopButton() {
   return (
     <Fragment>
       {show ? (
-        <div className="fixed bottom-10 right-0 z-50 mb-6 mr-6">
+        <>
           <button
             onClick={jumpToTop}
-            className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 rounded-full p-2 text-white transition"
+            className="fixed bottom-24 right-4 z-50 bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 rounded-full p-2 text-white transition"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function ScrollToTopButton() {
               />
             </svg>
           </button>
-        </div>
+        </>
       ) : (
         <Fragment />
       )}
