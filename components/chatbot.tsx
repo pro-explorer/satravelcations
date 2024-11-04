@@ -15,7 +15,7 @@ declare global {
 export default function Chatbot() {
   useEffect(() => {
     window.embeddedChatbotConfig = {
-      chatbotId: "BRgkRmtkP38NtI7BZ6QiD",
+      chatbotId: "17n0C2zSwi828jz1DbxIr",
       domain: "www.chatbase.co",
     };
   }, []);
