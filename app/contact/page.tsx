@@ -65,7 +65,7 @@ export default function ContactPage() {
           <div className="mt-5">
             <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
               <MapPinIcon className="w-4 h-4" />
-              <span>{siteMetadata.address}</span>
+              <span>{siteMetadata.officeAddress}</span>
             </div>
             {siteMetadata?.email && (
               <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">

@@ -70,7 +70,7 @@ export default async function Footer() {
                     'text-lm block py-2 underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300'
                   )}
                 >
-                  Address : {siteMetadata.address}
+                  Address : {siteMetadata.officeAddress}
                 </Link>
               </li>
             </ul>
