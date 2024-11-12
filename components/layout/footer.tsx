@@ -39,7 +39,7 @@ export default async function Footer() {
         </div>
 
         <div>
-          <h3 className="mb-3 text-lg font-semibold tracking-widest">Contact Details</h3>
+          <h3 className="mb-3 text-lg font-semibold tracking-widest">Contact</h3>
           <nav>
             <ul>
               <li>
