@@ -3,7 +3,6 @@ import { CartProvider } from 'components/cart/cart-context';
 import Chatbot from 'components/chatbot';
 import { Navbar } from 'components/layout/navbar';
 import ScrollToTopButton from 'components/scroll-to-top-button';
-import { WelcomeToast } from 'components/welcome-toast';
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from 'lib/utils';
 import { getCart } from 'lib/wix';
@@ -56,7 +55,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <main>
               {children}
               <Toaster closeButton />
-              <WelcomeToast />
+              {  /*  <WelcomeToast />*/ }
             </main>
           </CartProvider>
         </ThemeProviders>
