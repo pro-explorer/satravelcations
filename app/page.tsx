@@ -56,7 +56,7 @@ export default function HomePage() {
           <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:top-[130px] sm:left-[150px] bg-white">
           Satisfaction 
             <br />
-            rate
+            Rate
           </span>
         </div>
       </div>
