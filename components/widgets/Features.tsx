@@ -44,7 +44,7 @@ export default function Features() {
               you can do to help.
             </p>
             <a
-              href="/projects"
+              href="/about"
               className="text-purple-site py-6 font-site"
              // data-testid={testIds.HOME_PAGE.OUR_INITIATIVES_CTA}
             >

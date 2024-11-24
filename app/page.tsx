@@ -4,6 +4,7 @@ import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import Features from 'components/widgets/Features';
 import Features2 from 'components/widgets/Features2';
+import Features3 from 'components/widgets/Features3';
 
 export const metadata = {
   description: 'Explore South Africa with us. Tailor-made Travel Experiences for You. Experience the art of luxury travel with expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!',
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Carousel />
       <Features/>
       <Features2/>
+      <Features3/>
       <Footer />
     </>
   );
