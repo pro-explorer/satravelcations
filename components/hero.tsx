@@ -25,7 +25,8 @@ const Hero = () => {
     <motion.section
       className="relative -mt-2 h-[580px]"
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.5 }} // Trigger animation every time
       variants={container}
     >
       {/* Background Video */}
@@ -51,7 +52,7 @@ const Hero = () => {
             className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
             role="alert"
             variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
           >
             <span className="mr-3 rounded-full bg-primary-600 px-4 py-1.5 text-xs text-white">
               New
@@ -64,7 +65,7 @@ const Hero = () => {
           <motion.h1
             className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl"
             variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
           >
             Let's take a tour Cape Town!
           </motion.h1>
@@ -73,7 +74,7 @@ const Hero = () => {
           <motion.p
             className="mb-8 text-lg font-normal sm:px-16 lg:text-xl xl:px-48"
             variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
           >
             Tailor-made Travel Experiences for You. Experience the art of luxury travel with
             expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!
@@ -83,7 +84,7 @@ const Hero = () => {
           <motion.div
             className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16"
             variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
           >
             <a
               href="/about"
