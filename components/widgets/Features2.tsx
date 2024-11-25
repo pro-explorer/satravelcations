@@ -31,9 +31,9 @@ export default function Features2() {
             <h3 className="text-2xl font-site">Recent News</h3>
             <p className="my-6 text-sm">
               Get caught up on recent news and our latest achievements in the
-              world of education.
+              world of traveling.
             </p>
-            <a href="/news" className="text-purple-site py-6 font-site">
+            <a href="/blog" className="text-purple-site py-6 font-site">
               Read More
             </a>
           </div>
@@ -62,14 +62,11 @@ export default function Features2() {
 
           </div>
           <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-530px]">
-            <h3 className="text-2xl font-site">Take Part</h3>
+            <h3 className="text-2xl font-site">Why Choose Us?</h3>
             <p className="my-6 text-sm">
-              We welcome contributions in whatever form they come. Whether you
-              want to contribute your time as a volunteer, join us as a partner
-              or donate resources towards helping us achieve our goals, there is
-              always an opportunity to make a difference.
+            SATravelcations offers personalized travel experiences, tailored to your preferences. We ensure exceptional service and exclusive deals, creating seamless journeys that turn your travel dreams into lasting memories.
             </p>
-            <a href="/contact" className="text-purple-site py-6 font-site">
+            <a href="/why-choose-us" className="text-purple-site py-6 font-site">
               Read More
             </a>
           </div>

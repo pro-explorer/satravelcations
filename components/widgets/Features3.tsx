@@ -37,8 +37,8 @@ export default function Features3() {
               </g>
             </svg>
             <span className="font-site">
-              Spread empathy
-              <br /> through education
+            Foster connection 
+              <br /> through travel
             </span>
           </div>
           <div className="text-center flex flex-col items-center gap-4">
@@ -106,7 +106,8 @@ export default function Features3() {
               </g>
             </svg>
             <span className="font-site">
-              Increase donations equally <br /> across 24 countries
+            Inspire global exploration 
+               <br /> through personalized travel
             </span>
           </div>
           <div className="text-center flex flex-col items-center gap-4">
@@ -219,7 +220,8 @@ export default function Features3() {
               </g>
             </svg>
             <span className="font-site">
-              Help more children and teens <br /> graduate from high school
+            Empower travelers to create 
+              <br /> lasting memories
             </span>
           </div>
         </div>
