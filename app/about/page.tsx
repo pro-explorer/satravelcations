@@ -1,6 +1,7 @@
 'use client';
 
 import { CarouselClient } from 'components/Carousel/Carousel';
+import Features3 from 'components/widgets/Features3';
 import Image from 'next/image';
 import AboutHero from './hero';
 
@@ -126,42 +127,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-
-        <h2 className="font-site mb-10 text-center text-3xl sm:mb-20 sm:text-5xl">
-          2035 in Numbers
-        </h2>
-
-        <div className="font-site flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site block text-4xl sm:text-[200px] sm:leading-[200px]">
-              40K
-            </span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:right-0 sm:top-[190px] sm:inline-block sm:text-4xl">
-              Dollars
-              <br />
-              Raised
-            </span>
-          </div>
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site text-4xl sm:text-[200px] sm:leading-[200px]">8K</span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:left-[130px] sm:top-[50px] sm:inline-block sm:text-4xl">
-              Happy
-              <br />
-              Travelers
-            </span>
-          </div>
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site text-4xl sm:text-[200px] sm:leading-[200px]">
-              100%
-            </span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:left-[150px] sm:top-[130px] sm:inline-block sm:text-4xl">
-              Satisfaction
-              <br />
-              Rate
-            </span>
-          </div>
-        </div>
-
+        <Features3/>
         <CarouselClient />
       </div>
     </>

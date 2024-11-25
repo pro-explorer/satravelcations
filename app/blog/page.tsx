@@ -15,14 +15,18 @@ const Page = async ({
     <>
       <BlogHero />
 
-      <h1
+    
+      <div className='px-5'> 
+         <h1
         id="blogs-headline"
         className="text-brand-primary my-3 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug"
       >
-        Blogs
+       Latest Blogs
       </h1>
-      <BlogPostsPreview posts={result.posts} />
+         <BlogPostsPreview posts={result.posts} />
       <BlogPostsPagination pagination={result.pagination} />
+      </div>
+     
     </>
   );
 };
