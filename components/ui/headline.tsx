@@ -13,9 +13,9 @@ interface HeadlineProps {
 }
 
 const Headline: React.FC<HeadlineProps> = ({
-  title = '',
-  subtitle = null,
-  tagline = null,
+  title,
+  subtitle,
+  tagline,
   classes = {},
 }) => {
   const {
@@ -37,11 +37,8 @@ const Headline: React.FC<HeadlineProps> = ({
             className={twMerge(
               "text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
             )}
-            dangerouslySetInnerHTML={{
-              __html: typeof tagline === "string" ? tagline : "",
-            }}
           >
-            {typeof tagline !== "string" && tagline}
+            {typeof tagline === "string" ? tagline : tagline}
           </p>
         )}
         {title && (
@@ -50,21 +47,15 @@ const Headline: React.FC<HeadlineProps> = ({
               "font-bold leading-tighter tracking-tighter font-heading text-heading text-3xl",
               titleClass
             )}
-            dangerouslySetInnerHTML={{
-              __html: typeof title === "string" ? title : "",
-            }}
           >
-            {typeof title !== "string" && title}
+            {typeof title === "string" ? title : title}
           </h2>
         )}
         {subtitle && (
           <p
             className={twMerge("mt-4 text-muted", subtitleClass)}
-            dangerouslySetInnerHTML={{
-              __html: typeof subtitle === "string" ? subtitle : "",
-            }}
           >
-            {typeof subtitle !== "string" && subtitle}
+            {typeof subtitle === "string" ? subtitle : subtitle}
           </p>
         )}
       </div>

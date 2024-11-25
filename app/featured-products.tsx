@@ -1,5 +1,6 @@
 import { Carousel } from 'components/carousel';
 import { ThreeItemGrid } from 'components/grid/three-items';
+import Headline from 'components/ui/headline';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -30,7 +31,18 @@ const FeaturedProducts = () => {
     <section className="py-16 ">
       <div className="  text-center">
         {/* Section Heading */}
-        <h2 className="text-5xl font-extrabold sm:px-16">Choose Your Packages</h2>
+    
+
+        <Headline
+        title="Choose Your Packages"
+        subtitle="Packages"
+        tagline="Luxury, Adventure, Memories"
+        classes={{
+          container: "max-w-4xl mx-auto",
+          title: "text-5xl ",
+          subtitle: "text-2xl ",
+        }}
+      />
 
         {/* Product Cards */}
         <ThreeItemGrid />

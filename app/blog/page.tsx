@@ -1,6 +1,7 @@
 import { BlogPostsPreview } from 'components/BlogPostPreview';
 import { BlogPostsPagination } from 'components/BlogPostsPagination';
 //import { Header } from "@/components/Header";
+import Headline from 'components/ui/headline';
 import { wisp } from 'lib/wisp';
 import BlogHero from './hero';
 
@@ -17,12 +18,24 @@ const Page = async ({
 
     
       <div className='px-5'> 
-         <h1
+
+         <div
         id="blogs-headline"
-        className="text-brand-primary my-3 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug"
       >
-       Latest Blogs
-      </h1>
+       <Headline
+          title="Our Travel Blog"
+          subtitle="Get inspired for your next adventure with tips, stories, and destination highlights."
+          tagline="Travel Insights & Stories"
+          classes={{
+            container: "max-w-4xl mx-auto ",
+            title: "text-5xl ",
+            subtitle: "text-2xl ",
+          }}
+        />
+      </div>
+
+     
+
          <BlogPostsPreview posts={result.posts} />
       <BlogPostsPagination pagination={result.pagination} />
       </div>

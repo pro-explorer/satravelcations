@@ -1,3 +1,4 @@
+
 export default function Features3() {
   return (
     <div className="flex flex-col sm:flex-row sm:mt-32 mb-12 sm:gap-12">
@@ -6,6 +7,7 @@ export default function Features3() {
     <h2 className="text-center text-4xl my-10 sm:my-20 font-site">
           Our Goals
         </h2>
+       
         <div className="flex flex-col sm:flex-row gap-12 justify-between">
           <div className="text-center flex flex-col items-center gap-4">
             <svg

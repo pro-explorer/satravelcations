@@ -1,6 +1,7 @@
  "use client"
  
- import { motion } from 'framer-motion';
+import Headline from 'components/ui/headline';
+import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaStar, FaUserCircle } from 'react-icons/fa';
 
@@ -59,12 +60,16 @@ const ReviewsCarousel = () => {
     <section className="py-20 ">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold ">What Our Clients Say</h2>
-          <p className="text-lg  mt-4 max-w-2xl mx-auto">
-            Hear from our happy clients about their unforgettable experiences with SATravelcations.
-          </p>
-        </div>
+    
+        <Headline
+        title="What Our Clients Say"
+        subtitle="Hear from our happy clients about their unforgettable experiences with SATravelcations."
+        classes={{
+          container: "max-w-4xl mx-auto ",
+          title: "text-5xl ",
+          subtitle: "text-2xl ",
+        }}
+      />
 
         {/* Scrollable Area */}
         <div className="relative">

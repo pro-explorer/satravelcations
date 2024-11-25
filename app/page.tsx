@@ -1,5 +1,6 @@
 import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
+import Headline from 'components/ui/headline';
 import ContactForm from 'components/widgets/contact-form';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -37,13 +38,17 @@ const AboutUs = () => {
     <section className="relative py-16 ">
       {/* Content Overlay */}
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl ">
-          About Us
-        </h2>
+      
 
-        <p className="text-lg mb-8 sm:text-xl max-w-3xl mx-auto">
-          Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right.
-        </p>
+        <Headline
+        title="About Us"
+        subtitle="Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right."
+        classes={{
+          container: "max-w-4xl mx-auto",
+          title: "text-5xl ",
+          subtitle: "text-2xl ",
+        }}
+      />
 
         {/* Quick Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -104,10 +109,18 @@ const TopDestinations = () => {
   return (
     <section className="py-16 ">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl">Explore Our Top Destinations</h2>
-        <p className="text-lg mb-12 sm:text-xl">
-          Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation.
-        </p>
+        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl"></h2>
+     
+
+        <Headline
+        title="Explore Our Top Destinations"
+        subtitle="Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation."
+        classes={{
+          container: "max-w-4xl mx-auto",
+          title: "text-5xl ",
+          subtitle: "text-2xl ",
+        }}
+      />
 
         {/* Grid of Destinations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -195,8 +208,6 @@ const TopDestinations = () => {
 };
 
 
-
-
 const ContactUs = () => {
   return (
     <section className="relative py-16">
@@ -243,14 +254,18 @@ const StatisticsSection = () => {
       {/* Content Container */}
       <div className="max-w-screen-xl mx-auto px-6 text-center ">
         {/* Section Title */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl">
-            Our Achievements
-          </h2>
-          <p className="text-lg mb-8 sm:text-xl">
-            We take pride in delivering exceptional travel experiences. Here’s what makes us stand out.
-          </p>
-        </div>
+        
+        <Headline
+        title="Our Achievements"
+        subtitle="We take pride in delivering exceptional travel experiences. Here’s what makes us stand out."
+        classes={{
+          container: "max-w-4xl mx-auto ",
+          title: "text-5xl ",
+          subtitle: "text-2xl ",
+        }}
+      />
+
+
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
