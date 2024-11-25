@@ -1,7 +1,7 @@
 export default function Features3() {
   return (
     <div className="flex flex-col sm:flex-row sm:mt-32 mb-12 sm:gap-12">
-       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
+       <div className="max-w-7xl mx-auto mt-[-120px] relative  px-8 sm:px-20">
     
     <h2 className="text-center text-4xl my-10 sm:my-20 font-site">
           Our Goals
