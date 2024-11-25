@@ -16,7 +16,7 @@ export const BlogPostPreview: FunctionComponent<{
           <Image
             alt={post.title}
             className="object-cover"
-            src={post.image || "/public/images/placeholder.webp"}
+            src={post.image || "/images/placeholder.webp"}
             fill
           />
         </div>

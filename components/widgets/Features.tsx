@@ -31,7 +31,7 @@ export default function Features() {
         <Image
             alt=""
             className="object-cover"
-            src="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_434,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg"
+            src="/images/pexels-vince-2265876.jpg"
             fill
           />
 
@@ -66,7 +66,7 @@ export default function Features() {
            <Image
             alt=""
             className="object-cover"
-            src="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_615,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg"
+            src="/images/pexels-vitor-milanez-939243811-20057005.jpg"
             fill
           />
 
