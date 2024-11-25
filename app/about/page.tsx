@@ -1,28 +1,55 @@
-import { Carousel } from 'components/carousel';
-import { CarouselClient } from 'components/Carousel/Carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
-import Hero from 'components/hero';
-import Footer from 'components/layout/footer';
+"use client";
+
+
+import useWeb3Forms from "@web3forms/react";
+import Features from 'components/widgets/Features';
 import Features2 from 'components/widgets/Features2';
+import Features3 from 'components/widgets/Features3';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+export default function AboutPage() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    watch,
+    control,
+    setValue,
+    formState: { errors, isSubmitSuccessful, isSubmitting }
+  } = useForm({
+    mode: "onTouched"
+  });
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState('');
+  // Please update the Access Key in the Sanity CMS - Site Congig Page
+  const apiKey =  "7d8db944-b7c1-4c30-b1d3-1f1f1c0cf9ab";
 
-export const metadata = {
-  description: 'Explore South Africa with us. Tailor-made Travel Experiences for You. Experience the art of luxury travel with expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!',
-  openGraph: {
-    type: 'website'
-  }
-};
+  const { submit: onSubmit } = useWeb3Forms({
+    access_key: apiKey,
+    settings: {
+      from_name: "SATravelcations",
+      subject: "New Contact Message from SATravelcations Website"
+    },
+    onSuccess: (msg, data) => {
+      setIsSuccess(true);
+      setMessage(msg);
+      reset();
+    },
+    onError: (msg, data) => {
+      setIsSuccess(false);
+      setMessage(msg);
+    }
+  });
 
-export default function HomePage() {
   return (
-    <>
-      <Hero />
-      <ThreeItemGrid />
-       <Carousel />
-
-
+    <div className= "container px-8 mx-auto xl:px-5">
+      <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+        About
+      </h1>
       <div className="mx-auto relative sm:px-20 py-5">
-     
+      <Features/>
       <Features2/>
+      <Features3/>
 
       <h2 className="text-3xl sm:text-5xl text-center mb-10 sm:mb-20 font-site">
         2035 in Numbers
@@ -60,15 +87,7 @@ export default function HomePage() {
         </div>
       </div>
 
-<CarouselClient/>
-      
-      </div>
-
-
-      <Footer />
-    </>
+    </div>
+    </div>
   );
 }
-
-
-
