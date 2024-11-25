@@ -502,7 +502,7 @@ export async function getTopDestinations(): Promise<Destination[]> {
   const { queryDataItems } = getWixClient().use(items);
 
   const { items: destinations } = await queryDataItems({
-    dataCollectionId: 'TopDestinations', // Replace with the actual collection ID for top destinations
+    dataCollectionId: 'Destinations', // Replace with the actual collection ID for top destinations
   })
     .find()
     .catch((e) => {

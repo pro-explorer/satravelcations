@@ -17,19 +17,20 @@ const Page = async ({
       <BlogHero />
 
     
-      <div className='px-5'> 
+      <div className='px-5 mt-4'> 
 
          <div
         id="blogs-headline"
+         className=''
       >
        <Headline
           title="Our Travel Blog"
           subtitle="Get inspired for your next adventure with tips, stories, and destination highlights."
           tagline="Travel Insights & Stories"
           classes={{
-            container: "max-w-4xl mx-auto ",
-            title: "text-5xl ",
-            subtitle: "text-2xl ",
+            container: "max-w-4xl mx-auto",
+            title: "text-4xl font-bold text-gray-800 dark:text-white",
+            subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
           }}
         />
       </div>

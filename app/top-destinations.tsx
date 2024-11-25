@@ -14,7 +14,6 @@ export async function  TopDestinations  () {
       <div className="max-w-screen-xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl"></h2>
      
-
         <Headline
         title="Explore Our Top Destinations"
         subtitle="Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation."

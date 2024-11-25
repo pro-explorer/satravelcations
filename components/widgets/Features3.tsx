@@ -1,11 +1,24 @@
+import Headline from "components/ui/headline";
+
 export default function Features3() {
   return (
     <div className="flex flex-col sm:flex-row sm:mt-32 mb-12 sm:gap-12">
        <div className="max-w-7xl mx-auto mt-[-120px] relative  px-8 sm:px-20">
     
     <h2 className="text-center text-4xl my-10 sm:my-20 font-site">
-          Our Goals
+          
         </h2>
+
+        <Headline
+        title="Our Goals"
+        subtitle="We are committed to creating extraordinary travel experiences tailored to our clients' dreams. Through innovation, sustainability, and exceptional service, we aim to inspire a love for exploration and unforgettable journeys."
+        tagline="Your Journey, Our Commitment"
+          classes={{
+            container: "max-w-4xl mx-auto",
+            title: "text-4xl font-bold text-gray-800 dark:text-white",
+            subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+          }}
+        />
         <div className="flex flex-col sm:flex-row gap-12 justify-between">
           <div className="text-center flex flex-col items-center gap-4">
             <svg

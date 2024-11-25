@@ -39,8 +39,8 @@ const FeaturedProducts = () => {
         tagline="Luxury, Adventure, Memories"
         classes={{
           container: "max-w-4xl mx-auto",
-          title: "text-5xl ",
-          subtitle: "text-2xl ",
+          title: "text-4xl font-bold text-gray-800 dark:text-white",
+          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
         }}
       />
 

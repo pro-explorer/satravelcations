@@ -22,13 +22,13 @@ const blogs = []
    tagline="Featured Blogs"
         classes={{
           container: "max-w-4xl mx-auto",
-          title: "text-5xl ",
-          subtitle: "text-2xl ",
+          title: "text-4xl font-bold text-gray-800 dark:text-white",
+          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
         }}
       />
 
         {/* Grid of Blogs*/}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {/* Destination Item 1 */}
           <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
             <Image

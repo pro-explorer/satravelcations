@@ -7,7 +7,7 @@ import Hero from './hero';
 
 export default async function DestinationsPage() {
 
-  const destinations = []
+  //const destinations = await getPages()
 
   return (
     <>
@@ -20,9 +20,9 @@ export default async function DestinationsPage() {
           subtitle="Handpicked destinations for every traveler, from breathtaking beaches to majestic mountains."
           tagline="Unforgettable Journeys Await"
           classes={{
-            container: "max-w-4xl mx-auto ",
-          title: "text-5xl ",
-          subtitle: "text-2xl ",
+            container: "max-w-4xl mx-auto",
+            title: "text-4xl font-bold text-gray-800 dark:text-white",
+            subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
           }}
         />
   

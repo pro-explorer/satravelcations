@@ -16,8 +16,8 @@ const AboutUs = () => {
         subtitle="Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right."
         classes={{
           container: "max-w-4xl mx-auto",
-          title: "text-5xl ",
-          subtitle: "text-2xl ",
+          title: "text-4xl font-bold text-gray-800 dark:text-white",
+          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
         }}
       />
 

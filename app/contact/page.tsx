@@ -1,6 +1,7 @@
 "use client";
 
 import useWeb3Forms from "@web3forms/react";
+import Headline from "components/ui/headline";
 import ContactForm from "components/widgets/contact-form";
 import siteMetadata from "data/siteMetadata";
 import { useState } from "react";
@@ -46,14 +47,17 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-6 py-2 lg:py-6">
       {/* Page Header */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
-          We'd Love to Hear From You
-        </h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-          Have questions or need assistance? Contact us and we'll get back to you as soon as possible.
-        </p>
-      </div>
+    
+
+      <Headline
+   title="We'd Love to Hear From You"
+   subtitle="Have questions or need assistance? Contact us and we'll get back to you as soon as possible."
+        classes={{
+          container: "max-w-4xl mx-auto",
+          title: "text-4xl font-bold text-gray-800 dark:text-white",
+          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+        }}
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Contact Information */}
