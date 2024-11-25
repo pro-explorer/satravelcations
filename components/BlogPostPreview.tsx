@@ -12,13 +12,6 @@ const animationVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-
-
-
-
-
-
-
 export const BlogPostPreview: FunctionComponent<{
   post: GetPostsResult["posts"][0];
 }> = ({ post }) => {
@@ -27,9 +20,9 @@ export const BlogPostPreview: FunctionComponent<{
       className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transform transition-transform hover:scale-105 hover:shadow-xl"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }} // Animation happens only once
       variants={animationVariants}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} // No delay
     >
       <Link href={`/blog/${post.slug}`} className="block">
         <div className="relative aspect-[16/9]">
@@ -69,20 +62,6 @@ export const BlogPostPreview: FunctionComponent<{
   );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const BlogPostsPreview: FunctionComponent<{
   posts: GetPostsResult["posts"];
   className?: string;
@@ -91,17 +70,17 @@ export const BlogPostsPreview: FunctionComponent<{
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }} // Ensures animations happen only once
       className={cn(
         "grid grid-cols-1 gap-16 lg:gap-28 md:grid-cols-3 md:my-16 my-8",
         className
       )}
     >
-      {posts.map((post, index) => (
+      {posts.map((post) => (
         <motion.div
           key={post.id}
           variants={animationVariants}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          transition={{ duration: 0.5 }} // No delay per card
         >
           <BlogPostPreview post={post} />
         </motion.div>
