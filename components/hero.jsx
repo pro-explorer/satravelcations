@@ -1,60 +1,10 @@
-// tailwind.config.js
-
-/* 
-
-tailwind.config = {
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"}
-      }
-    },
-    fontFamily: {
-      'body': [
-    'Inter', 
-    'ui-sans-serif', 
-    'system-ui', 
-    '-apple-system', 
-    'system-ui', 
-    'Segoe UI', 
-    'Roboto', 
-    'Helvetica Neue', 
-    'Arial', 
-    'Noto Sans', 
-    'sans-serif', 
-    'Apple Color Emoji', 
-    'Segoe UI Emoji', 
-    'Segoe UI Symbol', 
-    'Noto Color Emoji'
-  ],
-      'sans': [
-    'Inter', 
-    'ui-sans-serif', 
-    'system-ui', 
-    '-apple-system', 
-    'system-ui', 
-    'Segoe UI', 
-    'Roboto', 
-    'Helvetica Neue', 
-    'Arial', 
-    'Noto Sans', 
-    'sans-serif', 
-    'Apple Color Emoji', 
-    'Segoe UI Emoji', 
-    'Segoe UI Symbol', 
-    'Noto Color Emoji'
-  ]
-    }
-  }
-}
-
-
-*/
-
 const Hero = () => {
   return (
-    <section className="relative -mt-2 h-[580px] bg-[url('https://images.pexels.com/photos/29030845/pexels-photo-29030845/free-photo-of-stunning-view-of-durdle-door-beach-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-fixed bg-center">
+    <section className="relative -mt-2 h-[580px]">
+      <video className="absolute inset-0 h-full w-full object-cover" autoPlay loop muted>
+        <source src="/videos/home-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex flex-col justify-center px-8 py-8 text-slate-50 sm:px-16">
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
@@ -63,7 +13,7 @@ const Hero = () => {
             className="mb-7 inline-flex animate-pulse items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
             role="alert"
           >
-            <span className="bg-primary-600 mr-3 rounded-full px-4 py-1.5 text-xs text-white">
+            <span className="mr-3 rounded-full bg-primary-600 px-4 py-1.5 text-xs text-white">
               New
             </span>{' '}
             <span className="text-sm font-medium">See what's new</span>
@@ -91,7 +41,7 @@ const Hero = () => {
           <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
             <a
               href="/about"
-              className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 inline-flex animate-pulse items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4"
+              className="inline-flex animate-pulse items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Learn more
               <svg
