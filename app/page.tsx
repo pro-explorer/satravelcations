@@ -1,11 +1,10 @@
-import { Carousel } from 'components/carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
 import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import ContactForm from 'components/widgets/contact-form';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaPlaneDeparture, FaRegClipboard, FaStar, FaSuitcaseRolling, FaThumbsUp, FaUserCheck } from 'react-icons/fa';
+import { FaArrowRight, FaPlaneDeparture, FaRegClipboard, FaStar, FaSuitcaseRolling, FaThumbsUp, FaUserCheck } from 'react-icons/fa';
+import FeaturedProducts from './featured-products';
 import ReviewCarousel from './reviews-carousel';
 
 export const metadata = {
@@ -20,17 +19,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ThreeItemGrid />
-      <Carousel />
-        {/* Call to Action */}
-        <div className="flex justify-center">
-          <Link
-            href="/search" 
-            className="inline-block px-10 py-2 bg-primary-600 text-white rounded-full text-lg shadow-lg hover:bg-primary-700 transition duration-300"
-          >
-            Discover More Packages
-          </Link>
-        </div>
+      <FeaturedProducts/>
       <AboutUs/>
      <TopDestinations/>
       <StatisticsSection/>
@@ -94,12 +83,15 @@ const AboutUs = () => {
 
         {/* Call to Action */}
         <div className="flex justify-center">
-          <a 
-            href="/about" 
-            className="inline-block px-10 py-4 bg-primary-600 text-white rounded-full text-lg shadow-lg hover:bg-primary-700 transition duration-300"
+        <Link
+            href="/about"
+            className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
           >
-            Learn More About Us
-          </a>
+           Learn More About Us
+            <FaArrowRight className="inline-block ml-2" />
+          </Link>
+
+         
         </div>
       </div>
     </section>
@@ -186,12 +178,16 @@ const TopDestinations = () => {
 
         {/* Call to Action */}
         <div className="mt-12">
-          <a
+
+        <Link
             href="/destinations"
             className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
           >
-            Explore More Destinations
-          </a>
+           Explore More Destinations
+            <FaArrowRight className="inline-block ml-2" />
+          </Link>
+
+        
         </div>
       </div>
     </section>

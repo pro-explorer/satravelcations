@@ -53,16 +53,7 @@ export async function ThreeItemGrid() {
 
   return (
     <div className="px-4 py-8">
-    
-  {/* Section Header */}
-  <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold ">Choose Your Package</h2>
-          <p className="text-lg  mt-4 max-w-2xl mx-auto">
-            Hear from our happy clients about their unforgettable experiences with SATravelcations.
-          </p>
-        </div>
-
-
+ 
       <section className="mx-auto grid max-w-screen-2xl gap-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
         <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
         <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
