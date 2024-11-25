@@ -1,9 +1,15 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors');
 
+const flowbite = require("flowbite-react/tailwind");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [   
+    flowbite.content(),
+    './app/**/*.{js,ts,jsx,tsx}', 
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -46,6 +52,7 @@ module.exports = {
     hoverOnlyWhenSupported: true
   },
   plugins: [
+  
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/typography'),
     plugin(({ matchUtilities, theme }) => {
@@ -61,6 +68,7 @@ module.exports = {
           values: theme('transitionDelay')
         }
       );
-    })
+    }),
+    flowbite.plugin(),
   ]
 };
