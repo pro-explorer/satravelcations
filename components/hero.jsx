@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Hero = () => {
   return (
     <section className="relative -mt-2 h-[580px]">
@@ -57,9 +59,10 @@ const Hero = () => {
                 />
               </svg>
             </a>
-            <a
+
+            <Link
               href="/search"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-white hover:text-blue-600"
             >
               <svg
                 className="-ml-1 mr-2 h-5 w-5"
@@ -71,7 +74,7 @@ const Hero = () => {
                 <path d="M24 12A12 12 0 1 1 12 0a12.008 12.008 0 0 1 12 12Zm-1.5 0A10.5 10.5 0 1 0 12 22.5 10.516 10.516 0 0 0 22.5 12ZM7.542 5.841l4.074 1.739-1.739 4.073L5.8 9.914l1.742-4.073Zm5.158 7.926 2.185 4.406H14.2l-2.343-4.687-2.295 4.687h-.656l2.4-5.01-1.046-.441.282-.656 3.215 1.364-.281.67Zm-.553-5.451 3.216 1.378-1.378 3.2-3.2-1.364 1.364-3.215Zm3.764 2.011 2.56 1.082-1.1 2.546-2.545-1.083 1.082-2.545Z" />
               </svg>
               Explore packages
-            </a>
+            </Link>
           </div>
         </div>
       </div>
