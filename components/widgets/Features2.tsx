@@ -27,7 +27,7 @@ export default function Features2() {
 
 
           </div>
-          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-44 sm:mt-[-230px]">
+          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative            bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white                                sm:ml-44 sm:mt-[-230px]">
             <h3 className="text-2xl font-site">Recent News</h3>
             <p className="my-6 text-sm">
               Get caught up on recent news and our latest achievements in the
@@ -61,7 +61,7 @@ export default function Features2() {
           />
 
           </div>
-          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-530px]">
+          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white      sm:ml-32 sm:mt-[-530px]">
             <h3 className="text-2xl font-site">Why Choose Us?</h3>
             <p className="my-6 text-sm">
             SATravelcations offers personalized travel experiences, tailored to your preferences. We ensure exceptional service and exclusive deals, creating seamless journeys that turn your travel dreams into lasting memories.

@@ -36,7 +36,7 @@ export default function Features() {
           />
 
           </div>
-          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-300px]">
+          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white      sm:mt-[-300px]">
             <h3 className="text-2xl font-site">Our Vision</h3>
             <p className="my-6 text-sm">
             To become the leading provider of personalized and memorable travel experiences, offering tailor-made packages that exceed customer expectations and inspire a love for exploration across South Africa and beyond.
@@ -71,7 +71,7 @@ export default function Features() {
           />
 
           </div>
-          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-430px]">
+          <div className="border-y-4 border-blue-site p-8 sm:w-60 relative    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white      sm:ml-32 sm:mt-[-430px]">
             <h3 className="text-2xl font-site">Our Mission</h3>
             <p className="my-6 text-sm">
             Our mission is to transform your travel dreams into reality, ensuring every detail is meticulously planned for a seamless and unforgettable journey.
