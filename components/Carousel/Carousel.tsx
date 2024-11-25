@@ -22,7 +22,7 @@ export const CarouselClient = () => {
           <div key={i} className="relative h-full">
             {/* Image using next/image component */}
             <Image 
-              src={images[i]} 
+              src={`${images[i]}`} 
               alt={`Carousel image ${i + 1}`} 
               layout="fill"
               objectFit="cover"
