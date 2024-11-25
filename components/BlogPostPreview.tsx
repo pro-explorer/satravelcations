@@ -12,20 +12,27 @@ const animationVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+
+
+
+
+
+
+
 export const BlogPostPreview: FunctionComponent<{
   post: GetPostsResult["posts"][0];
 }> = ({ post }) => {
   return (
     <motion.div
-      className="break-words"
+      className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transform transition-transform hover:scale-105 hover:shadow-xl"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
       variants={animationVariants}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Link href={`/blog/${post.slug}`}>
-        <div className="aspect-[16/9] relative">
+      <Link href={`/blog/${post.slug}`} className="block">
+        <div className="relative aspect-[16/9]">
           <Image
             alt={post.title}
             className="object-cover"
@@ -34,27 +41,47 @@ export const BlogPostPreview: FunctionComponent<{
           />
         </div>
       </Link>
-      <div className="grid grid-cols-1 gap-3 md:col-span-2 mt-4">
-        <h2 className="font-sans font-semibold tracking-tighter text-primary text-2xl md:text-3xl">
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+      <div className="p-6">
+        <h2 className="font-bold text-2xl md:text-3xl text-gray-900 dark:text-gray-100 mb-3">
+          <Link href={`/blog/${post.slug}`} className="hover:text-primary-600">
+            {post.title}
+          </Link>
         </h2>
-        <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground">
+        <div className="text-sm text-gray-500 dark:text-gray-400 italic mb-2">
           {format(new Date(post.publishedAt || post.updatedAt), "dd MMMM yyyy")}
         </div>
-        <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-4 text-muted-foreground">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-3 mb-4">
           {post.description}
-        </div>
-        <div className="text-sm text-muted-foreground">
+        </p>
+        <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <div key={tag.id} className="mr-2 inline-block">
-              <Link href={`/tag/${tag.name}`}>#{tag.name}</Link>
-            </div>
+            <Link
+              key={tag.id}
+              href={`/tag/${tag.name}`}
+              className="text-sm bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-300 px-3 py-1 rounded-full hover:bg-primary-200 dark:hover:bg-primary-700 transition"
+            >
+              #{tag.name}
+            </Link>
           ))}
         </div>
       </div>
     </motion.div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const BlogPostsPreview: FunctionComponent<{
   posts: GetPostsResult["posts"];
