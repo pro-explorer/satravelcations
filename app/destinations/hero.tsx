@@ -27,7 +27,7 @@ const Hero = () => {
 
         {/* Call-to-Action Buttons */}
         <div className="flex gap-4">
-          <Link href="/destinations" className="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+          <Link href="#destinations-headline" className="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
               Explore Destinations
          
           </Link>
