@@ -71,9 +71,7 @@ const Page = async ({ params: { slug } }: { params: Params }) => {
         <BlogPostContent post={result.post} />
         <RelatedPosts posts={posts} />
       </div>
-      
-  
-      
+    
     </>
   );
 };

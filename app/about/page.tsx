@@ -2,6 +2,7 @@
 
 import { CarouselClient } from 'components/Carousel/Carousel';
 import Features3 from 'components/widgets/Features3';
+import OurAchievements from 'components/widgets/our-achievements';
 import Image from 'next/image';
 import AboutHero from './hero';
 
@@ -128,6 +129,7 @@ export default function AboutPage() {
           </div>
         </div>
         <Features3/>
+        <OurAchievements/>
         <CarouselClient />
       </div>
     </>
