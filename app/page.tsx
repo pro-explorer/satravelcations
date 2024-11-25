@@ -4,8 +4,8 @@ import { ThreeItemGrid } from 'components/grid/three-items';
 import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import ContactForm from 'components/widgets/contact-form';
-import Features2 from 'components/widgets/Features2';
 import Image from 'next/image';
+import { FaPlaneDeparture, FaThumbsUp, FaUserCheck } from 'react-icons/fa';
 
 export const metadata = {
   description:
@@ -22,109 +22,63 @@ export default function HomePage() {
       <ThreeItemGrid />
       <Carousel />
       <AboutUs/>
-    
      <TopDestinations/>
-      <div className="relative mx-auto py-5 sm:px-20">
-        <Features2 />
-
-        <h2 className="font-site mb-10 text-center text-3xl sm:mb-20 sm:text-5xl">
-          2035 in Numbers
-        </h2>
-        <div className="font-site flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site block text-4xl sm:text-[200px] sm:leading-[200px]">
-              40K
-            </span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:right-0 sm:top-[190px] sm:inline-block sm:text-4xl">
-              Dollars
-              <br />
-              Raised
-            </span>
-          </div>
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site text-4xl sm:text-[200px] sm:leading-[200px]">8K</span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:left-[130px] sm:top-[50px] sm:inline-block sm:text-4xl">
-              Happy
-              <br />
-              Travelers
-            </span>
-          </div>
-          <div className="relative text-center sm:text-left">
-            <span className="text-purple-site text-4xl sm:text-[200px] sm:leading-[200px]">
-              100%
-            </span>
-            <span className="border-purple-site block border-t-4 bg-white/70 text-xl text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white sm:absolute sm:left-[150px] sm:top-[130px] sm:inline-block sm:text-4xl">
-              Satisfaction
-              <br />
-              Rate
-            </span>
-          </div>
-        </div>
-
-        <CarouselClient />
-      </div>
+      <StatisticsSection/>
+      <CarouselClient/>
       <ContactUs/>
+     
       <Footer />
     </>
   );
 }
 
-
+import { FaRegClipboard, FaStar, FaSuitcaseRolling } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
-    <section className="relative py-16 bg-gray-900">
-      {/* Video Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <video className="object-cover w-full h-full opacity-70" autoPlay loop muted>
-          <source src="/videos/about-us-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      
+    <section className="relative py-16 ">
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center text-white">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl">About SATravelcations</h2>
-        
-        <p className="text-lg mb-8 sm:text-xl">
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center">
+        <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl ">
+          About Us
+        </h2>
+
+        <p className="text-lg mb-8 sm:text-xl max-w-3xl mx-auto">
           Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right.
         </p>
 
         {/* Quick Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="flex items-center justify-center space-x-4">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 4a6 6 0 1112 0A6 6 0 0110 4zm0 10a4 4 0 100 8 4 4 0 000-8z" />
-              </svg>
+          {/* Personalized Itineraries */}
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center">
+              <FaSuitcaseRolling className="w-10 h-10 text-white" />
             </div>
             <div>
               <h3 className="text-2xl font-semibold">Personalized Itineraries</h3>
-              <p className="text-sm">Travel the way you want, with bespoke packages designed just for you.</p>
+              <p className="text-sm text-gray-700">Travel the way you want, with bespoke packages designed just for you.</p>
             </div>
           </div>
 
-          <div className="flex items-center justify-center space-x-4">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.933 6.467L1.5 7.898 9 15.398l7.5-7.5-1.433-1.431-6.067 6.067z" />
-              </svg>
+          {/* Expert Travel Planners */}
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center">
+              <FaRegClipboard className="w-10 h-10 text-white" />
             </div>
             <div>
               <h3 className="text-2xl font-semibold">Expert Travel Planners</h3>
-              <p className="text-sm">Our team of travel experts are here to ensure everything runs smoothly.</p>
+              <p className="text-sm text-gray-700">Our team of travel experts are here to ensure everything runs smoothly.</p>
             </div>
           </div>
 
-          <div className="flex items-center justify-center space-x-4">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 12V6H8v6H4l8 8 8-8h-4z" />
-              </svg>
+          {/* 5-Star Experiences */}
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center">
+              <FaStar className="w-10 h-10 text-white" />
             </div>
             <div>
               <h3 className="text-2xl font-semibold">5-Star Experiences</h3>
-              <p className="text-sm">We hand-pick the finest resorts, hotels, and excursions for our clients.</p>
+              <p className="text-sm text-gray-700">We hand-pick the finest resorts, hotels, and excursions for our clients.</p>
             </div>
           </div>
         </div>
@@ -133,7 +87,7 @@ const AboutUs = () => {
         <div className="flex justify-center">
           <a 
             href="/about" 
-            className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
+            className="inline-block px-10 py-4 bg-primary-600 text-white rounded-full text-lg shadow-lg hover:bg-primary-700 transition duration-300"
           >
             Learn More About Us
           </a>
@@ -142,6 +96,14 @@ const AboutUs = () => {
     </section>
   );
 };
+
+
+
+
+
+
+
+
 
 
 
@@ -277,4 +239,55 @@ const ContactUs = () => {
     </section>
   );
 };
+
+
+
+
+
+
+
+const StatisticsSection = () => {
+  return (
+    <section className="py-16 ">
+      {/* Content Container */}
+      <div className="max-w-screen-xl mx-auto px-6 text-center ">
+        {/* Section Title */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl">
+            Our Achievements
+          </h2>
+          <p className="text-lg mb-8 sm:text-xl">
+            We take pride in delivering exceptional travel experiences. Here’s what makes us stand out.
+          </p>
+        </div>
+
+        {/* Statistics Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Happy Customers */}
+          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-20 shadow-xl rounded-lg">
+            <FaUserCheck className="text-6xl text-primary-600 mb-4" />
+            <h3 className="text-3xl font-extrabold">5000+</h3>
+            <p className="text-lg font-medium">Happy Travelers</p>
+          </div>
+
+          {/* Trips Taken */}
+          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-20 shadow-xl rounded-lg">
+            <FaPlaneDeparture className="text-6xl text-primary-600 mb-4" />
+            <h3 className="text-3xl font-extrabold">1500+</h3>
+            <p className="text-lg font-medium">Trips Taken</p>
+          </div>
+
+          {/* Positive Reviews */}
+          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-20 shadow-xl rounded-lg">
+            <FaThumbsUp className="text-6xl text-primary-600 mb-4" />
+            <h3 className="text-3xl font-extrabold">2000+</h3>
+            <p className="text-lg font-medium">5-Star Reviews</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
 
