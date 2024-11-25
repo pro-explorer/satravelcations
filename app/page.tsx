@@ -4,6 +4,7 @@ import { ThreeItemGrid } from 'components/grid/three-items';
 import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import Features2 from 'components/widgets/Features2';
+import Image from 'next/image';
 
 export const metadata = {
   description:
@@ -119,6 +120,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<TopDestinations/>
       <div className="relative mx-auto py-5 sm:px-20">
         <Features2 />
 
@@ -168,56 +170,64 @@ export default function HomePage() {
 
 const AboutUs = () => {
   return (
-    <section className="py-16 bg-gray-50 relative">
+    <section className="relative py-16 bg-gray-900">
       {/* Video Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <video className="object-cover w-full h-full" autoPlay loop muted>
+        <video className="object-cover w-full h-full opacity-70" autoPlay loop muted>
           <source src="/videos/about-us-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl text-white">
-          About SATravelcations
-        </h2>
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          
-          {/* Left Side - Textual Content */}
-          <div className="lg:w-1/2 space-y-4 text-left text-white">
-            <h3 className="text-2xl font-semibold">Your Personalized Travel Experience</h3>
-            <p className="text-lg">
-              At SATravelcations, we believe that travel is more than just a destination; it's an experience.
-              We specialize in crafting luxurious, personalized travel itineraries to match your unique tastes and preferences.
-            </p>
-            <p className="text-lg">
-              From romantic getaways to adventurous expeditions, our expert travel planners ensure every detail is perfect for an unforgettable journey.
-            </p>
-            <div className="mt-8 flex justify-center gap-8">
-              <div className="text-center">
-                <h4 className="text-xl font-semibold text-primary-600">100+ Destinations</h4>
-                <p className="text-sm">Explore the world with us</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-xl font-semibold text-primary-600">5-Star Experiences</h4>
-                <p className="text-sm">Luxury and comfort are our promises</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-xl font-semibold text-primary-600">24/7 Customer Support</h4>
-                <p className="text-sm">We're here for you at every step</p>
-              </div>
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center text-white">
+        <h2 className="text-4xl font-extrabold tracking-tight mb-4 sm:text-5xl">About SATravelcations</h2>
+        
+        <p className="text-lg mb-8 sm:text-xl">
+          Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right.
+        </p>
+
+        {/* Quick Info Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="flex items-center justify-center space-x-4">
+            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 4a6 6 0 1112 0A6 6 0 0110 4zm0 10a4 4 0 100 8 4 4 0 000-8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">Personalized Itineraries</h3>
+              <p className="text-sm">Travel the way you want, with bespoke packages designed just for you.</p>
             </div>
           </div>
 
-          {/* Right Side - Image */}
-          <div className="lg:w-1/2 hidden lg:block">
-            {/* You could add another video or related image here if needed */}
+          <div className="flex items-center justify-center space-x-4">
+            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.933 6.467L1.5 7.898 9 15.398l7.5-7.5-1.433-1.431-6.067 6.067z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">Expert Travel Planners</h3>
+              <p className="text-sm">Our team of travel experts are here to ensure everything runs smoothly.</p>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center space-x-4">
+            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 12V6H8v6H4l8 8 8-8h-4z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">5-Star Experiences</h3>
+              <p className="text-sm">We hand-pick the finest resorts, hotels, and excursions for our clients.</p>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center">
+        <div className="flex justify-center">
           <a 
             href="/about" 
             className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
@@ -229,5 +239,101 @@ const AboutUs = () => {
     </section>
   );
 };
+
+
+
+const TopDestinations = () => {
+  return (
+    <section className="py-16 bg-gray-100">
+      <div className="max-w-screen-xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl">Top Destinations</h2>
+        <p className="text-lg mb-12 sm:text-xl">
+          Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation.
+        </p>
+
+        {/* Grid of Destinations */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {/* Destination Item 1 */}
+          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+            <Image
+              src="/images/about-hero.jpg"
+              alt="Cape Town"
+              width={500}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <h3 className="text-2xl font-bold">Cape Town</h3>
+              <p className="text-sm">Experience the beauty of Table Mountain and pristine beaches.</p>
+            </div>
+          </div>
+
+          {/* Destination Item 2 */}
+          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+            <Image
+              src="/images/about-hero.jpg"
+              alt="Mauritius"
+              width={500}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <h3 className="text-2xl font-bold">Mauritius</h3>
+              <p className="text-sm">Discover paradise with crystal-clear waters and stunning resorts.</p>
+            </div>
+          </div>
+
+          {/* Destination Item 3 */}
+          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+            <Image
+              src="/images/about-hero.jpg"
+              alt="Santorini"
+              width={500}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <h3 className="text-2xl font-bold">Santorini</h3>
+              <p className="text-sm">A dreamy island getaway with sunsets and iconic white-washed houses.</p>
+            </div>
+          </div>
+
+          {/* Destination Item 4 */}
+          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+            <Image
+              src="/images/about-hero.jpg"
+              alt="Bora Bora"
+              width={500}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <h3 className="text-2xl font-bold">Bora Bora</h3>
+              <p className="text-sm">Relax in the lap of luxury with overwater bungalows and turquoise lagoons.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-12">
+          <a
+            href="/destinations"
+            className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
+          >
+            Explore More Destinations
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+
 
 
