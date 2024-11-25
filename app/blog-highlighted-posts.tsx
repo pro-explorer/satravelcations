@@ -5,7 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
-const BlogHighlightedPosts = () => {
+export async function  BlogHighlightedPosts (){
+
+
+const blogs = []
+
   return (
     <section className="py-16 ">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
@@ -108,5 +112,3 @@ const BlogHighlightedPosts = () => {
   );
 };
 
-
-export default BlogHighlightedPosts;

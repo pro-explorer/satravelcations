@@ -2,11 +2,11 @@ import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import OurAchievements from 'components/widgets/our-achievements';
 import AboutUs from './about';
-import BlogHighlightedPosts from './blog-highlighted-posts';
+import { BlogHighlightedPosts } from './blog-highlighted-posts';
+import { ClientReviewsCarousel } from './client-reviews-carousel';
 import ContactUs from './contact';
 import FeaturedProducts from './featured-products';
-import ReviewCarousel from './reviews-carousel';
-import TopDestinations from './top-destinations';
+import { TopDestinations } from './top-destinations';
 
 export const metadata = {
   description:
@@ -25,7 +25,7 @@ export default function HomePage() {
       <TopDestinations/>
       <BlogHighlightedPosts/>
       <OurAchievements/>
-      <ReviewCarousel />
+      <ClientReviewsCarousel />
        <ContactUs/>
       <Footer />
     </>

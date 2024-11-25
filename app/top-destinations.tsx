@@ -5,7 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
-const TopDestinations = () => {
+export async function  TopDestinations  () {
+
+  const destinations = []
+
   return (
     <section className="py-16 ">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
@@ -108,4 +111,3 @@ const TopDestinations = () => {
 };
 
 
-export default TopDestinations;

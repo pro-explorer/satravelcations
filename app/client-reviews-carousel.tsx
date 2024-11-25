@@ -28,7 +28,10 @@ const reviews = [
   },
 ];
 
-const ReviewsCarousel = () => {
+export async function  ClientReviewsCarousel () {
+
+  const clientReviews  = []
+
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -142,4 +145,4 @@ const ReviewsCarousel = () => {
   );
 };
 
-export default ReviewsCarousel;
+

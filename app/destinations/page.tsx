@@ -3,7 +3,12 @@
 import { DestinationGrid } from 'components/destination-griditem';
 import Headline from 'components/ui/headline';
 import Hero from './hero';
-export default function DestinationsPage() {
+
+
+export default async function DestinationsPage() {
+
+  const destinations = []
+
   return (
     <>
       <Hero />

@@ -125,7 +125,7 @@ export type SEO = {
 
 
 
-export type Review = {
+export type ClientReview = {
   id: string; // Unique identifier for the review
   author: string; // Name of the reviewer
   rating: number; // Rating out of 5

@@ -5,7 +5,7 @@ import { createClient, media, OAuthStrategy } from '@wix/sdk';
 import { collections, products } from '@wix/stores';
 import { SortKey, WIX_SESSION_COOKIE } from 'lib/constants';
 import { cookies } from 'next/headers';
-import { Cart, Collection, Menu, Page, Product, ProductVariant } from './types';
+import { Cart, ClientReview, Collection, Destination, Menu, Page, Product, ProductVariant } from './types';
 
 const cartesian = <T>(data: T[][]) =>
   data.reduce((a, b) => a.flatMap((d) => b.map((e) => [...d, e])), [[]] as T[][]);
@@ -496,6 +496,124 @@ export async function getProducts({
     .find();
 
   return items.map(reshapeProduct);
+}
+
+export async function getTopDestinations(): Promise<Destination[]> {
+  const { queryDataItems } = getWixClient().use(items);
+
+  const { items: destinations } = await queryDataItems({
+    dataCollectionId: 'TopDestinations', // Replace with the actual collection ID for top destinations
+  })
+    .find()
+    .catch((e) => {
+      if (e.details.applicationError.code === 'WDE0025') {
+        console.error(
+          'TopDestinations collection was not found. Did you forget to create the TopDestinations data collection?'
+        );
+        return { items: [] };
+      } else {
+        throw e;
+      }
+    });
+
+  return destinations.map((item) => ({
+    id: item._id!,
+    name: item.data!.name,
+    description: item.data!.description,
+    imageUrl: item.data!.imageUrl,
+    location: item.data!.location,
+    rating: item.data!.rating,
+    seo: {
+      title: item.data!.seoTitle,
+      description: item.data!.seoDescription
+    },
+    createdAt: item.data!._createdDate.$date,
+    updatedAt: item.data!._updatedDate.$date,
+    activities:[],
+    country:"",
+    featured:true,
+    images:[],
+    luxurious:true,
+    reviewsCount:4,
+  }));
+}
+
+export async function getDestinations(): Promise<Destination[]> {
+  const { queryDataItems } = getWixClient().use(items);
+
+  const { items: destinations } = await queryDataItems({
+    dataCollectionId: 'Destinations', // Replace with the actual collection ID for destinations
+  })
+    .find()
+    .catch((e) => {
+      if (e.details.applicationError.code === 'WDE0025') {
+        console.error(
+          'Destinations collection was not found. Did you forget to create the Destinations data collection?'
+        );
+        return { items: [] };
+      } else {
+        throw e;
+      }
+    });
+
+  return destinations.map((item) => ({
+    id: item._id!,
+    name: item.data!.name,
+    description: item.data!.description,
+    imageUrl: item.data!.imageUrl,
+    location: item.data!.location,
+    rating: item.data!.rating,
+    seo: {
+      title: item.data!.seoTitle,
+      description: item.data!.seoDescription
+    },
+    createdAt: item.data!._createdDate.$date,
+    updatedAt: item.data!._updatedDate.$date,
+    activities:[],
+    country:"",
+    featured:true,
+    images:[],
+    luxurious:true,
+    reviewsCount:4,
+  }));
+}
+
+export async function getClientReviews(): Promise<ClientReview[]> {
+  const { queryDataItems } = getWixClient().use(items);
+
+  const { items: reviews } = await queryDataItems({
+    dataCollectionId: 'ClientReviews', // Replace with the actual collection ID for client reviews
+  })
+    .find()
+    .catch((e) => {
+      if (e.details.applicationError.code === 'WDE0025') {
+        console.error(
+          'ClientReviews collection was not found. Did you forget to create the ClientReviews data collection?'
+        );
+        return { items: [] };
+      } else {
+        throw e;
+      }
+    });
+
+  return reviews.map((item) => ({
+    id: item._id!,
+    clientName: item.data!.clientName,
+    reviewText: item.data!.reviewText,
+    rating: item.data!.rating,
+    reviewDate: item.data!._createdDate.$date,
+    seo: {
+      title: item.data!.seoTitle,
+      description: item.data!.seoDescription
+    },
+    createdAt: item.data!._createdDate.$date,
+    updatedAt: item.data!._updatedDate.$date,
+    author:"",
+    date:"",
+    message:"",
+    productId:"",
+    response:"",
+  }));
 }
 
 export const getWixClient = () => {
