@@ -1,4 +1,5 @@
 import { Carousel } from 'components/carousel';
+import { CarouselClient } from 'components/Carousel/Carousel';
 import { ThreeItemGrid } from 'components/grid/three-items';
 import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
@@ -61,6 +62,7 @@ export default function HomePage() {
         </div>
       </div>
 
+<CarouselClient/>
       
       </div>
 

@@ -37,11 +37,9 @@ export default function Features() {
 
           </div>
           <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-300px]">
-            <h3 className="text-2xl font-site">Our Initiatives</h3>
+            <h3 className="text-2xl font-site">Our Vision</h3>
             <p className="my-6 text-sm">
-              Our initiatives bring people together to help solve real problems
-              and evoke a positive change. Explore our initiatives and see what
-              you can do to help.
+            To become the leading provider of personalized and memorable travel experiences, offering tailor-made packages that exceed customer expectations and inspire a love for exploration across South Africa and beyond.
             </p>
             <a
               href="/about"
@@ -76,11 +74,7 @@ export default function Features() {
           <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-430px]">
             <h3 className="text-2xl font-site">Our Mission</h3>
             <p className="my-6 text-sm">
-              We believe that education is a human right and a powerful tool for
-              social change. We provide educational projects, learning resources
-              and mentoring programs for kids of all ages and backgrounds. We
-              aim to create a world where everyone has the opportunity to learn
-              and grow.
+            Our mission is to transform your travel dreams into reality, ensuring every detail is meticulously planned for a seamless and unforgettable journey.
             </p>
             <a href="/about" className="text-purple-site py-6 font-site">
               Read More
