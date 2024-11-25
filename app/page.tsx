@@ -34,7 +34,7 @@ export default function HomePage() {
           <span className="text-4xl sm:text-[200px] block sm:leading-[200px] text-purple-site">
             40K
           </span>
-          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:right-0 sm:top-[190px]">
+          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:right-0 sm:top-[190px]    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white     ">
             Dollars
             <br />
             Raised
@@ -44,7 +44,7 @@ export default function HomePage() {
           <span className="text-4xl sm:text-[200px] sm:leading-[200px] text-purple-site">
             8K
           </span>
-          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:top-[50px] sm:left-[130px] bg-white">
+          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:top-[50px] sm:left-[130px]    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white     ">
             Happy 
             <br />
             Travelers 
@@ -54,7 +54,7 @@ export default function HomePage() {
           <span className="text-4xl sm:text-[200px] sm:leading-[200px] text-purple-site">
             100%
           </span>
-          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:top-[130px] sm:left-[150px] bg-white">
+          <span className="border-t-4 block sm:inline-block border-purple-site text-xl sm:text-4xl sm:absolute sm:top-[130px] sm:left-[150px]    bg-white/70  text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white     ">
           Satisfaction 
             <br />
             Rate
