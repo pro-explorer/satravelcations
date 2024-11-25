@@ -21,106 +21,8 @@ export default function HomePage() {
       <ThreeItemGrid />
       <Carousel />
       <AboutUs/>
-     
-      <section className=" py-16">
-        <div className="mx-auto max-w-screen-xl px-6 text-center sm:px-16">
-          <h2 className="mb-12 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Explore Our Top Destinations
-          </h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {/* Destination Card 1 */}
-            <div className="relative transform overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
-              <img
-                src="/images/destination1.jpg"
-                alt="Cape Town"
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-4 text-white">
-                <h3 className="text-xl font-semibold">Cape Town</h3>
-                <p className="text-sm">
-                  Experience the beauty of the iconic Table Mountain, pristine beaches, and vibrant
-                  culture.
-                </p>
-                <a
-                  href="/destination/cape-town"
-                  className="mt-4 inline-block rounded-full bg-primary-600 px-4 py-2 text-white transition duration-300 hover:bg-primary-700"
-                >
-                  View More
-                </a>
-              </div>
-            </div>
-
-            {/* Destination Card 2 */}
-            <div className="relative transform overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
-              <img
-                src="/images/destination2.jpg"
-                alt="Kruger National Park"
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-4 text-white">
-                <h3 className="text-xl font-semibold">Kruger National Park</h3>
-                <p className="text-sm">
-                  Embark on a safari adventure in one of the largest game reserves in South Africa.
-                </p>
-                <a
-                  href="/destination/kruger-national-park"
-                  className="mt-4 inline-block rounded-full bg-primary-600 px-4 py-2 text-white transition duration-300 hover:bg-primary-700"
-                >
-                  View More
-                </a>
-              </div>
-            </div>
-
-            {/* Destination Card 3 */}
-            <div className="relative transform overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
-              <img
-                src="/images/destination3.jpg"
-                alt="Johannesburg"
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-4 text-white">
-                <h3 className="text-xl font-semibold">Johannesburg</h3>
-                <p className="text-sm">
-                  A dynamic city that blends culture, history, and modernity with rich experiences.
-                </p>
-                <a
-                  href="/destination/johannesburg"
-                  className="mt-4 inline-block rounded-full bg-primary-600 px-4 py-2 text-white transition duration-300 hover:bg-primary-700"
-                >
-                  View More
-                </a>
-              </div>
-            </div>
-
-            {/* Destination Card 4 */}
-            <div className="relative transform overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
-              <img
-                src="/images/destination4.jpg"
-                alt="Durban"
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-4 text-white">
-                <h3 className="text-xl font-semibold">Durban</h3>
-                <p className="text-sm">
-                  Discover golden beaches, rich Zulu heritage, and endless sunshine in Durban.
-                </p>
-                <a
-                  href="/destination/durban"
-                  className="mt-4 inline-block rounded-full bg-primary-600 px-4 py-2 text-white transition duration-300 hover:bg-primary-700"
-                >
-                  View More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<TopDestinations/>
+    
+     <TopDestinations/>
       <div className="relative mx-auto py-5 sm:px-20">
         <Features2 />
 
@@ -244,9 +146,9 @@ const AboutUs = () => {
 
 const TopDestinations = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 ">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl">Top Destinations</h2>
+        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl">Explore Our Top Destinations</h2>
         <p className="text-lg mb-12 sm:text-xl">
           Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation.
         </p>
