@@ -2,32 +2,87 @@
 
 import Headline from "components/ui/headline";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FaPlaneDeparture, FaThumbsUp, FaUserCheck } from "react-icons/fa";
 
+// Achievement Data
 const achievements = [
   {
     id: 1,
     icon: <FaUserCheck />,
-    stat: "5000+",
+    stat: 5000,
     description: "Happy Travelers",
   },
   {
     id: 2,
     icon: <FaPlaneDeparture />,
-    stat: "1500+",
+    stat: 1500,
     description: "Trips Taken",
   },
   {
     id: 3,
     icon: <FaThumbsUp />,
-    stat: "2000+",
+    stat: 2000,
     description: "5-Star Reviews",
   },
 ];
 
 const OurAchievements = () => {
+  const [count, setCount] = useState<{ [key: number]: number }>({});
+  const [isInView, setIsInView] = useState<boolean>(false);
+
+  // Function to trigger count-up animation
+  const startCounting = () => {
+    achievements.forEach((achievement) => {
+      let i = 0;
+      const target = achievement.stat;
+      const step = Math.ceil(target / 100); // Adjust increment step for smoother animation
+
+      const interval = setInterval(() => {
+        if (i < target) {
+          i += step; // Increment by step
+          if (i > target) i = target; // Ensure it doesn't exceed the target
+          setCount((prev) => ({
+            ...prev,
+            [achievement.id]: i,
+          }));
+        } else {
+          clearInterval(interval);
+        }
+      }, 30); // Adjust the interval speed
+    });
+  };
+
+  // Observe when the section comes into the viewport using Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isInView) {
+            setIsInView(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is in view
+    );
+
+    const target = document.getElementById("achievements");
+    if (target) observer.observe(target);
+
+    return () => {
+      if (target) observer.unobserve(target);
+    };
+  }, [isInView]);
+
+  // Start counting when the section is in view
+  useEffect(() => {
+    if (isInView) {
+      startCounting();
+    }
+  }, [isInView]);
+
   return (
-    <section className="py-16 ">
+    <section id="achievements" className="py-16">
       {/* Content Container */}
       <motion.div
         className="max-w-screen-xl mx-auto px-6 text-center"
@@ -63,10 +118,13 @@ const OurAchievements = () => {
                 {achievement.icon}
               </div>
 
-              {/* Statistic */}
-              <h3 className="text-4xl font-extrabold text-gray-800 dark:text-white">
-                {achievement.stat}
-              </h3>
+              {/* Statistic with Animation */}
+              <motion.h3 className="text-4xl font-extrabold text-gray-800 dark:text-white">
+                <span>
+                  {/* Displaying the animated number */}
+                  {count[achievement.id] || 0}+
+                </span>
+              </motion.h3>
 
               {/* Description */}
               <p className="text-lg font-medium text-gray-600 dark:text-gray-400">

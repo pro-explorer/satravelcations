@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <section className="relative py-16">
+    <section className="relative py-16 overflow-x-hidden">
       {/* Background Image for the entire section */}
       <div className="absolute inset-0 z-0">
         <Image

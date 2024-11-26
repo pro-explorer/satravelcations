@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
 
 // Mock Data
 const blogs = Array.from({ length: 16 }, (_, i) => ({
@@ -80,15 +79,7 @@ export function BlogHighlightedPosts() {
             className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-full text-sm font-medium hover:bg-primary-700 transition-all duration-300"
           >
             View All Blogs
-            <FaArrowRight className="inline-block ml-2" />
           </Link>
-
-
-         
-
-
-
-
         </motion.div>
       </div>
     </section>
