@@ -1,5 +1,11 @@
 'use client';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+
+const slideInFadeIn = {
+  hidden: { opacity: 0, y: '60%' }, // Invisible and positioned below
+  visible: { opacity: 1, y: '0%' }, // Fully visible at the actual position
+};
 
 const AboutHero = () => {
   return (
@@ -11,25 +17,49 @@ const AboutHero = () => {
       </video>
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-center text-white">
-        <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center text-white">
+        {/* Animated Heading */}
+        <motion.h1
+          className="mb-6 text-5xl font-bold leading-tight sm:text-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideInFadeIn}
+          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+        >
           Discover the SATravelcations Experience
-        </h1>
-        <p className="mx-auto mb-8 max-w-4xl text-lg sm:text-xl">
+        </motion.h1>
+
+        {/* Animated Paragraph */}
+        <motion.p
+          className="mx-auto mb-8 max-w-4xl text-lg sm:text-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideInFadeIn}
+          transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
+        >
           SATravelcations is not just a travel agency. We’re your personal gateway to unforgettable
           journeys. Our tailored itineraries and exceptional service are designed to make every trip
           an extraordinary adventure.
-        </p>
+        </motion.p>
 
-        {/* Call-to-Action Button */}
-        <div className="flex gap-4">
+        {/* Animated Call-to-Action Button */}
+        <motion.div
+          className="flex gap-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideInFadeIn}
+          transition={{ duration: 1.4, ease: [0.25, 1, 0.5, 1] }}
+        >
           <Link
             href="/contact"
-            className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700"
+            className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700 hover:scale-105"
           >
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
