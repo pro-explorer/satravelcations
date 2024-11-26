@@ -7,7 +7,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 // Mock Data
-const blogs = Array.from({ length: 16 }, (_, i) => ({
+const blogs = Array.from({ length: 8 }, (_, i) => ({
   id: `blog-${i}`,
   createdAt: new Date(),
   teamId: `team-${i}`,

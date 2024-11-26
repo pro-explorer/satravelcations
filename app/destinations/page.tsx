@@ -70,10 +70,10 @@ export default async function DestinationsPage() {
   return (
     <>
       <DestinationsHero />
+      <div className="mt-4"  >
       <div className="container mx-auto px-8 xl:px-5">
      
-      <div className="mt-4">
-
+      <div  id='destinations-headline' >
     {/* Wrapping Headline with motion.div for animation */}
     <motion.div
             variants={slideInFadeInVariants}
@@ -86,6 +86,7 @@ export default async function DestinationsPage() {
               damping: 25,
               duration: 0.8,
             }}
+          
           >
 <Headline
           title="Explore Our Destinations"
@@ -98,11 +99,11 @@ export default async function DestinationsPage() {
           }}
         />
  </motion.div>
-
-  
 </div>
         
 <DestinationsPreview destinations={destinations} />
+      </div>
+
 
       
       </div>
