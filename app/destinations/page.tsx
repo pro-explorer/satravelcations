@@ -2,7 +2,7 @@
 
 import { DestinationGrid } from 'components/destination-griditem';
 import Headline from 'components/ui/headline';
-import Hero from './hero';
+import DestinationsHero from './hero';
 
 
 export default async function DestinationsPage() {
@@ -11,7 +11,7 @@ export default async function DestinationsPage() {
 
   return (
     <>
-      <Hero />
+      <DestinationsHero />
       <div className="container mx-auto px-8 xl:px-5">
      
 <div  id="destinations-headline">

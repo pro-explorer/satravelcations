@@ -24,3 +24,8 @@ button {
 .font-site {
   font-family: Oswald-Medium,Oswald, sans-serif;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
