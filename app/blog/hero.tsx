@@ -63,8 +63,9 @@ const BlogHero = () => {
         </motion.p>
 
         {/* Call-to-Action Buttons */}
-        <div className="flex justify-center gap-4">
+        <div                       className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
           <motion.div
+
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
