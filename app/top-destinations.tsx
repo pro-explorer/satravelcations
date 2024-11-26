@@ -18,9 +18,9 @@ export async function  TopDestinations  () {
         title="Explore Our Top Destinations"
         subtitle="Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation."
         classes={{
-          container: "max-w-4xl mx-auto",
-          title: "text-4xl font-bold text-gray-800 dark:text-white",
-          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+           container: "max-w-4xl mx-auto",
+    title: "text-3xl font-bold text-gray-800 dark:text-white", 
+    subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400", 
         }}
       />
 

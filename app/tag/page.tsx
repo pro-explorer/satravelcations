@@ -2,7 +2,7 @@ import Footer from "components/layout/footer";
 import { config } from "config";
 import { signOgImageUrl } from "lib/og-image";
 import { wisp } from "lib/wisp";
-import Link from "next/link";
+import { TagItem } from "./tag";
 
 export async function generateMetadata() {
   return {
@@ -49,16 +49,3 @@ export default async function Page() {
   );
 }
 
-// TagItem Component - Rounded and with reduced gap
-const TagItem = ({ tag }: { tag: { id: string; name: string } }) => {
-  return (
-    <div>
-      <Link
-        href={`/tag/${tag.name}`}
-        className="text-primary font-medium text-lg py-2 px-6 border border-gray-300 rounded-full shadow-sm hover:shadow-md hover:border-primary-500 transition-all duration-200 ease-in-out"
-      >
-        #{tag.name}
-      </Link>
-    </div>
-  );
-};

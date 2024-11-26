@@ -14,9 +14,9 @@ const OurAchievements = () => {
         title="Our Achievements"
         subtitle="We take pride in delivering exceptional travel experiences. Here’s what makes us stand out."
         classes={{
-          container: "max-w-4xl mx-auto",
-          title: "text-4xl font-bold text-gray-800 dark:text-white",
-          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+           container: "max-w-4xl mx-auto",
+    title: "text-3xl font-bold text-gray-800 dark:text-white", 
+    subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400", 
         }}
       />
 

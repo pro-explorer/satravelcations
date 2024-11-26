@@ -21,9 +21,9 @@ const blogs = []
    subtitle="Discover the latest travel tips, guides, and stories from our blog."
    tagline="Featured Blogs"
         classes={{
-          container: "max-w-4xl mx-auto",
-          title: "text-4xl font-bold text-gray-800 dark:text-white",
-          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+           container: "max-w-4xl mx-auto",
+    title: "text-3xl font-bold text-gray-800 dark:text-white", 
+    subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400", 
         }}
       />
 

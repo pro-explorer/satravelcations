@@ -9,17 +9,17 @@ const AboutUs = () => {
     <section className="relative py-16 ">
       {/* Content Overlay */}
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-16 text-center">
-      
 
-        <Headline
-        title="About Us"
-        subtitle="Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right."
-        classes={{
-          container: "max-w-4xl mx-auto",
-          title: "text-4xl font-bold text-gray-800 dark:text-white",
-          subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
-        }}
-      />
+      <Headline
+  title="About Us"
+  subtitle="Discover a world of luxurious travel experiences. At SATravelcations, we create tailor-made trips to the world's most beautiful destinations, ensuring every detail is just right."
+  classes={{
+    container: "max-w-4xl mx-auto",
+    title: "text-3xl font-bold text-gray-800 dark:text-white", 
+    subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400", 
+  }}
+/>
+
 
         {/* Quick Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
