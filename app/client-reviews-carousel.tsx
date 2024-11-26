@@ -1,11 +1,11 @@
 "use client";
+
 import { StarIcon } from "@heroicons/react/24/solid";
 import Headline from "components/ui/headline";
 import { motion } from "framer-motion";
 import { ClientReview } from "lib/wix/types";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
 
 const testReviews: ClientReview[] = [
   {
@@ -177,38 +177,14 @@ const testReviews: ClientReview[] = [
 ];
 
 
-
-
 export function ClientReviewsCarousel() {
-  
   const [clientReviews, setClientReviews] = useState<any[]>(testReviews);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fetch client reviews dynamically using an API call
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('/api/getReviews');
-        if (!response.ok) {
-          throw new Error('Failed to fetch reviews');
-        }
-        const reviews = await response.json();
-        setClientReviews(reviews);
-      } catch (error) {
-        setError('Error fetching reviews. Please try again later.');
-        console.error('Error fetching reviews:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    {};
-  }, []);
-
-  // Handle scroll to specific index
+  // Scroll to specific index
   const scrollToIndex = (index: number) => {
     const container = carouselRef.current;
     if (container && container.children.length > 0) {
@@ -221,35 +197,27 @@ export function ClientReviewsCarousel() {
     }
   };
 
-  // Scroll to the left
   const scrollLeft = () => {
     if (currentIndex > 0) {
       scrollToIndex(currentIndex - 1);
     }
   };
 
-  // Scroll to the right
   const scrollRight = () => {
     if (currentIndex < clientReviews.length - 1) {
       scrollToIndex(currentIndex + 1);
     }
   };
 
-  // Render stars based on the rating
   const renderStars = (rating: number) => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <StarIcon
-          key={i}
-          className={`w-5 h-5 ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
-        />
-      );
-    }
-    return stars;
+    return Array.from({ length: 5 }).map((_, i) => (
+      <StarIcon
+        key={i}
+        className={`w-5 h-5 ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
+      />
+    ));
   };
 
-  // If loading, show a loader; if error, show an error message
   if (loading) {
     return (
       <div className="text-center py-20">
@@ -270,18 +238,25 @@ export function ClientReviewsCarousel() {
     <section className="py-20">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
-        <Headline
-          title="What Our Clients Say"
-          subtitle="Hear from our happy clients about their unforgettable experiences with SATravelcations."
-          classes={{
-            container: "max-w-4xl mx-auto",
-            title: "text-4xl font-bold text-gray-800 dark:text-white",
-            subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
-          }}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <Headline
+            title="What Our Clients Say"
+            subtitle="Hear from our happy clients about their unforgettable experiences with SATravelcations."
+            classes={{
+              container: "max-w-4xl mx-auto",
+              title: "text-4xl font-bold text-gray-800 dark:text-white",
+              subtitle: "mt-4 text-lg text-gray-600 dark:text-gray-400",
+            }}
+          />
+        </motion.div>
 
         {/* Scrollable Area */}
-        <div className="relative">
+        <div className="relative mt-8">
           <div
             ref={carouselRef}
             className="flex overflow-x-scroll scroll-smooth space-x-4 pb-6"
@@ -293,8 +268,9 @@ export function ClientReviewsCarousel() {
                   key={index}
                   className="flex-none w-80 shadow-lg rounded-lg p-6 flex-shrink-0 relative"
                   initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div className="flex items-center mb-4">
                     <div className="font-semibold text-lg mr-2">{review.author}</div>
@@ -334,7 +310,13 @@ export function ClientReviewsCarousel() {
         </div>
 
         {/* Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <motion.div
+          className="flex justify-center mt-8 space-x-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           {clientReviews.map((_, index) => (
             <span
               key={index}
@@ -344,7 +326,7 @@ export function ClientReviewsCarousel() {
               onClick={() => scrollToIndex(index)}
             ></span>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

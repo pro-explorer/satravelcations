@@ -2,10 +2,10 @@ import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
 import OurAchievements from 'components/widgets/our-achievements';
 import AboutUs from './about';
-import { BlogHighlightedPosts } from './blog-highlighted-posts';
 import { ClientReviewsCarousel } from './client-reviews-carousel';
 import ContactUs from './contact';
 import FeaturedProducts from './featured-products';
+import { BlogHighlightedPosts } from './highlighted-posts';
 import { TopDestinations } from './top-destinations';
 
 export const metadata = {
