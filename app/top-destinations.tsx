@@ -1,112 +1,136 @@
- "use client"
- 
-import Headline from 'components/ui/headline';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
+"use client";
 
-export async function  TopDestinations  () {
+import Headline from "components/ui/headline";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
-  const destinations = []
+export async function TopDestinations() {
+  const destinations = [
+    {
+      id: 1,
+      name: "Cape Town",
+      location: "Western Cape",
+      country: "South Africa",
+      description: "Experience the beauty of Table Mountain and pristine beaches.",
+      images: [{ url: "/images/about-hero.jpg" }],
+      activities: ["Hiking", "Beaches", "Nature"]
+    },
+    {
+      id: 2,
+      name: "Mauritius",
+      location: "Indian Ocean",
+      country: "Mauritius",
+      description: "Discover paradise with crystal-clear waters and stunning resorts.",
+      images: [{ url: "/images/about-hero.jpg" }],
+      activities: ["Snorkeling", "Resorts", "Adventure"]
+    },
+    {
+      id: 3,
+      name: "Santorini",
+      location: "Cyclades",
+      country: "Greece",
+      description: "A dreamy island getaway with sunsets and iconic white-washed houses.",
+      images: [{ url: "/images/about-hero.jpg" }],
+      activities: ["Sunsets", "Wineries", "Exploration"]
+    },
+    {
+      id: 4,
+      name: "Bora Bora",
+      location: "Leeward Islands",
+      country: "French Polynesia",
+      description: "Relax in the lap of luxury with overwater bungalows and turquoise lagoons.",
+      images: [{ url: "/images/about-hero.jpg" }],
+      activities: ["Luxury", "Water Sports", "Romance"]
+    },
+  ];
 
   return (
-    <section className="py-16 ">
+    <section className="py-16">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight mb-8 sm:text-5xl"></h2>
-     
         <Headline
-        title="Explore Our Top Destinations"
-        subtitle="Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation."
-        classes={{
-           container: "max-w-4xl mx-auto",
-    title: "text-3xl font-bold text-gray-800 dark:text-white", 
-    subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400", 
-        }}
-      />
+          title="Explore Our Top Destinations"
+          subtitle="Discover some of the most breathtaking locations for your next getaway. Whether you're seeking luxury, adventure, or tranquility, these destinations are perfect for your dream vacation."
+          classes={{
+            container: "max-w-4xl mx-auto",
+            title: "text-3xl font-bold text-gray-800 dark:text-white",
+            subtitle: "mt-4 text-base text-gray-600 dark:text-gray-400",
+          }}
+        />
 
         {/* Grid of Destinations */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {/* Destination Item 1 */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-            <Image
-              src="/images/about-hero.jpg"
-              alt="Cape Town"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-              <h3 className="text-2xl font-bold">Cape Town</h3>
-              <p className="text-sm">Experience the beauty of Table Mountain and pristine beaches.</p>
-            </div>
-          </div>
-
-          {/* Destination Item 2 */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-            <Image
-              src="/images/about-hero.jpg"
-              alt="Mauritius"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-              <h3 className="text-2xl font-bold">Mauritius</h3>
-              <p className="text-sm">Discover paradise with crystal-clear waters and stunning resorts.</p>
-            </div>
-          </div>
-
-          {/* Destination Item 3 */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-            <Image
-              src="/images/about-hero.jpg"
-              alt="Santorini"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-              <h3 className="text-2xl font-bold">Santorini</h3>
-              <p className="text-sm">A dreamy island getaway with sunsets and iconic white-washed houses.</p>
-            </div>
-          </div>
-
-          {/* Destination Item 4 */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-            <Image
-              src="/images/about-hero.jpg"
-              alt="Bora Bora"
-              width={500}
-              height={300}
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black opacity-40"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-              <h3 className="text-2xl font-bold">Bora Bora</h3>
-              <p className="text-sm">Relax in the lap of luxury with overwater bungalows and turquoise lagoons.</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
+          {destinations.map((destination) => (
+            <motion.div
+              key={destination.id}
+              className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transform transition-transform hover:scale-105 hover:shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 25,
+                duration: 0.8,
+              }}
+            >
+              <Link href={`/destinations/${destination.id}`} passHref>
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    alt={destination.name}
+                    src={destination.images[0]?.url || "/images/placeholder.webp"}
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-cover"
+                  />
+                </div>
+              </Link>
+              <div className="p-6">
+                <h2 className="font-bold text-2xl text-gray-900 dark:text-gray-100 mb-3">
+                  <Link href={`/destinations/${destination.id}`} className="hover:text-primary-600">
+                    {destination.name}
+                  </Link>
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic mb-2">
+                  {destination.location}, {destination.country}
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-3 mb-4">
+                  {destination.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {destination.activities.map((activity, index) => (
+                    <span
+                      key={index}
+                      className="text-sm bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-300 px-3 py-1 rounded-full"
+                    >
+                      {activity}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12">
-
-        <Link
-            href="/destinations"
-            className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300"
-          >
-           Explore More Destinations
+          <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+         <Link
+             href="/destinations"
+             className="inline-block px-8 py-3 bg-primary-600 text-white rounded-full text-lg hover:bg-primary-700 transition duration-300 transform hover:scale-110"
+           >
+            Discover More
             <FaArrowRight className="inline-block ml-2" />
           </Link>
 
-        
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-
+}

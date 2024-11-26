@@ -1,5 +1,6 @@
 "use client";
 
+import Headline from "components/ui/headline";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,8 +23,27 @@ const blogs = Array.from({ length: 16 }, (_, i) => ({
 
 export function BlogHighlightedPosts() {
   return (
-    <section className="py-16 ">
+    <section className="py-16">
       <div className="max-w-screen-xl mx-auto px-6">
+        {/* Headline with Framer Motion Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <Headline
+            title="Our Latest Adventures"
+            subtitle="Explore the latest blogs and insights for your next luxurious getaway."
+            classes={{
+              container: "max-w-4xl mx-auto",
+              title: "text-3xl font-semibold text-gray-800 dark:text-white",
+              subtitle: "mt-4 text-sm text-gray-600 dark:text-gray-400",
+            }}
+          />
+        </motion.div>
+
         {/* Grid of Blog Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {blogs.map((blog, index) => (
@@ -82,7 +102,6 @@ export function BlogHighlightedPosts() {
             View All Blogs
             <FaArrowRight className="inline-block ml-2" />
           </Link>
-
         </motion.div>
       </div>
     </section>
