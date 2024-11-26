@@ -1,35 +1,41 @@
-"use client";
-import { format } from "date-fns";
-import { motion } from "framer-motion";
-import { cn } from "lib/utils";
-import { GetPostsResult } from "lib/wisp";
-import Image from "next/image";
-import Link from "next/link";
-import { FunctionComponent } from "react";
+'use client';
+import { format } from 'date-fns';
+import { motion } from 'framer-motion';
+import { cn } from 'lib/utils';
+import { GetPostsResult } from 'lib/wisp';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
 
-const animationVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+// Define animation variants for fade and slide-up effect
+const slideInFadeInVariants = {
+  hidden: { opacity: 0, y: 50 }, // Initially hidden and below the viewport
+  visible: { opacity: 1, y: 0 },  // Move to normal position with full opacity
 };
 
 export const BlogPostPreview: FunctionComponent<{
-  post: GetPostsResult["posts"][0];
+  post: GetPostsResult['posts'][0];
 }> = ({ post }) => {
   return (
     <motion.div
-      className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transform transition-transform hover:scale-105 hover:shadow-xl"
+      variants={slideInFadeInVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} // Animation happens only once
-      variants={animationVariants}
-      transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} // No delay
+      viewport={{ once: true, amount: 0.01 }} // Trigger when 1% of the element is in view
+      transition={{
+        type: 'spring',
+        stiffness: 100,
+        damping: 25,
+        duration: 0.8,
+      }}
+      className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transform transition-transform hover:scale-105 hover:shadow-xl"
     >
       <Link href={`/blog/${post.slug}`} className="block">
         <div className="relative aspect-[16/9]">
           <Image
             alt={post.title}
             className="object-cover"
-            src={post.image || "/images/placeholder.webp"}
+            src={post.image || '/images/placeholder.webp'}
             fill
           />
         </div>
@@ -41,7 +47,7 @@ export const BlogPostPreview: FunctionComponent<{
           </Link>
         </h2>
         <div className="text-sm text-gray-500 dark:text-gray-400 italic mb-2">
-          {format(new Date(post.publishedAt || post.updatedAt), "dd MMMM yyyy")}
+          {format(new Date(post.publishedAt || post.updatedAt), 'dd MMMM yyyy')}
         </div>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-3 mb-4">
           {post.description}
@@ -63,28 +69,16 @@ export const BlogPostPreview: FunctionComponent<{
 };
 
 export const BlogPostsPreview: FunctionComponent<{
-  posts: GetPostsResult["posts"];
+  posts: GetPostsResult['posts'];
   className?: string;
 }> = ({ posts, className }) => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} // Ensures animations happen only once
-      className={cn(
-        "grid grid-cols-1 gap-16 lg:gap-28 md:grid-cols-3 md:my-16 my-8",
-        className
-      )}
-    >
+    <div className={cn('grid grid-cols-1 gap-16 lg:gap-28 md:grid-cols-3 md:my-16 my-8', className)}>
       {posts.map((post) => (
-        <motion.div
-          key={post.id}
-          variants={animationVariants}
-          transition={{ duration: 0.5 }} // No delay per card
-        >
+        <div key={post.id}>
           <BlogPostPreview post={post} />
-        </motion.div>
+        </div>
       ))}
-    </motion.div>
+    </div>
   );
 };

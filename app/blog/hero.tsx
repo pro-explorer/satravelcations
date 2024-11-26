@@ -1,5 +1,17 @@
 'use client';
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 import Link from 'next/link';
+
+// Define the slideInFadeIn animation with spring transition
+const slideInFadeInVariants = {
+  hidden: { opacity: 0, x: -50 }, // Start from 50px to the left
+  visible: { opacity: 1, x: 0 }, // End position with full opacity (no offset)
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 const BlogHero = () => {
   return (
@@ -17,28 +29,81 @@ const BlogHero = () => {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white sm:px-10">
-        <h1 className="mb-6 text-4xl font-extrabold leading-tight sm:text-6xl">
+        <motion.h1
+          className="mb-6 text-4xl font-extrabold leading-tight sm:text-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
+          variants={slideInFadeInVariants}
+          transition={{
+            type: 'spring', // Spring transition for a more dynamic effect
+            stiffness: 100,
+            damping: 25,
+            duration: 0.8,
+          }}
+        >
           Travel Stories & Inspiration
-        </h1>
-        <p className="mx-auto mb-8 max-w-3xl text-lg sm:text-xl">
+        </motion.h1>
+        <motion.p
+          className="mx-auto mb-8 max-w-3xl text-lg sm:text-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
+          variants={slideInFadeInVariants}
+          transition={{
+            type: 'spring',
+            stiffness: 100,
+            damping: 25,
+            duration: 0.8,
+            delay: 0.2,
+          }}
+        >
           Explore our blog for the latest travel tips, destination guides, and inspiring stories.
           Discover new places and experiences with SATravelcations.
-        </p>
+        </motion.p>
 
         {/* Call-to-Action Buttons */}
         <div className="flex justify-center gap-4">
-          <Link
-            href="#blogs-headline"
-            className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700"
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
+            variants={buttonVariants}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+              damping: 25,
+              duration: 0.6,
+              delay: 0.4,
+            }}
           >
-            Explore Our Blog
-          </Link>
-          <Link
-            href="/tag"
-            className="rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-white hover:text-gray-900"
+            <Link
+              href="#blogs-headline"
+              className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700"
+            >
+              Explore Our Blog
+            </Link>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
+            variants={buttonVariants}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+              damping: 25,
+              duration: 0.6,
+              delay: 0.6,
+            }}
           >
-            View Tags
-          </Link>
+            <Link
+              href="/tag"
+              className="rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-white hover:text-gray-900"
+            >
+              View Tags
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>
