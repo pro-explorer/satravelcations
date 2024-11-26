@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion'; // Import framer-motion for animations
 import Link from 'next/link';
 
-// Define the slideInFadeIn animation with spring transition
 const slideInFadeInVariants = {
   hidden: { opacity: 0, x: -50 }, // Start from 50px to the left
   visible: { opacity: 1, x: 0 }, // End position with full opacity (no offset)
@@ -14,6 +13,17 @@ const buttonVariants = {
 };
 
 const BlogHero = () => {
+  const handleScrollToSection = () => {
+    // Scroll smoothly to the element with ID 'blogs-headline'
+    const element = document.getElementById("blogs-headline");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Align the element to the top of the viewport
+      });
+    }
+  };
+
   return (
     <div className="relative mb-8 h-[500px] w-full overflow-hidden bg-gray-800 sm:h-[600px]">
       {/* Background Image or Video */}
@@ -63,7 +73,7 @@ const BlogHero = () => {
         </motion.p>
 
         {/* Call-to-Action Buttons */}
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center items-center gap-4 space-x-4 mt-6">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -77,12 +87,12 @@ const BlogHero = () => {
               delay: 0.4,
             }}
           >
-            <Link
-              href="#blogs-headline"
+            <button
+              onClick={handleScrollToSection}
               className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700"
             >
               Explore Our Blog
-            </Link>
+            </button>
           </motion.div>
           <motion.div
             initial="hidden"
