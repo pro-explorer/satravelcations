@@ -3,8 +3,8 @@ import { BlogPostsPagination } from "components/BlogPostsPagination";
 import Footer from "components/layout/footer";
 import { Badge } from "components/ui/badge";
 import { wisp } from "lib/wisp";
-import { CircleX } from "lucide-react";
 import Link from "next/link";
+import { IoMdClose } from "react-icons/io";
 
 interface Params {
   slug: string;
@@ -38,7 +38,7 @@ const Page = async ({
         <div className="flex justify-between items-center mb-6">
           <Link href="/tag">
             <Badge className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-300">
-              <CircleX className="inline-block w-4 h-4 mr-2" />
+            <IoMdClose className="inline-block w-4 h-4 mr-2" />
               Posts tagged with <strong className="mx-2">#{slug}</strong>
             </Badge>
           </Link>
