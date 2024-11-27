@@ -63,7 +63,7 @@ const BlogHero = () => {
         </motion.p>
 
         {/* Call-to-Action Buttons */}
-        <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -79,7 +79,7 @@ const BlogHero = () => {
           >
             <Link
               href="#blogs-headline"
-              className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-700"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Explore Our Blog
             </Link>
@@ -99,7 +99,7 @@ const BlogHero = () => {
           >
             <Link
               href="/tag"
-              className="rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-white hover:text-gray-900"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-white hover:text-blue-600"
             >
               View Tags
             </Link>
