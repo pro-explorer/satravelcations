@@ -15,7 +15,7 @@ const buttonVariants = {
 
 const BlogHero = () => {
   return (
-    <div className="relative mb-8 h-[500px] w-full overflow-hidden bg-gray-800 sm:h-[600px]">
+    <div className="relative mb-8 h-[400px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden bg-gray-800">
       {/* Background Image or Video */}
       <div
         className="absolute left-0 top-0 h-full w-full bg-cover bg-center"
@@ -30,7 +30,7 @@ const BlogHero = () => {
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white sm:px-10">
         <motion.h1
-          className="mb-6 text-4xl font-extrabold leading-tight sm:text-6xl"
+          className="mb-6 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
@@ -45,7 +45,7 @@ const BlogHero = () => {
           Travel Stories & Inspiration
         </motion.h1>
         <motion.p
-          className="mx-auto mb-8 max-w-3xl text-lg sm:text-xl"
+          className="mx-auto mb-8 max-w-3xl text-base sm:text-lg lg:text-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
@@ -63,9 +63,8 @@ const BlogHero = () => {
         </motion.p>
 
         {/* Call-to-Action Buttons */}
-        <div                       className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
+        <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
           <motion.div
-
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.01 }} // Trigger when 1% is visible
