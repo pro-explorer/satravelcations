@@ -47,7 +47,7 @@ const ContactUs = () => {
 
           {/* Right Side: Form */}
           <motion.div
-            className="lg:w-1/2 w-full bg-white bg-opacity-90 shadow-lg rounded-lg p-8"
+            className="lg:w-1/2 w-full bg-white bg-opacity-90 shadow-lg rounded-lg p-8 my-4"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
