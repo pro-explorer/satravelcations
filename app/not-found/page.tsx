@@ -1,6 +1,4 @@
 import Footer from "components/layout/footer";
-import { config } from "config";
-import { signOgImageUrl } from "lib/og-image";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -8,20 +6,10 @@ export async function generateMetadata() {
   return {
     title: "404",
     description: "Something went wrong",
-    openGraph: {
-      title: "Explore Tags",
-      description: "Browse through various blog post categories",
-      images: [
-        signOgImageUrl({
-          title: "Blog Post Categories",
-          brand: config.blog.name,
-        }),
-      ],
-    },
   };
 }
 
-export default async function NotFound() {
+export default function NotFound() {
 
   return (
     <>
