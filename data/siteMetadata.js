@@ -2,6 +2,7 @@
 const siteMetadata = {
   title: "Let's take a tour Cape town!",
   author: 'Pro',
+  author_url:"https://www.instagram.com/pro___.___/",
   headerTitle: 'SA Travelcations',
   description: 'Tailor-made Travel Experiences for You',
   language: 'en-us',
