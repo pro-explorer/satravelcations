@@ -98,8 +98,10 @@ export default async function Footer() {
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <Link target= "_blank" href={siteMetadata.author_url}>Designed and Developed by Pro</Link>
-
+          <p>
+           Designed and Developed by{" "}
+           <Link target= "_blank" href={siteMetadata.author_url}>Pro</Link>
+           </p>
           <div className="md:ml-auto">
             <ThemeSwitch />
           </div>
