@@ -1,46 +1,13 @@
 "use client";
 
-import useWeb3Forms from "@web3forms/react";
 import ContactForm from "components/contact/contact-form";
 import Headline from "components/ui/headline";
 import siteMetadata from "data/siteMetadata";
 import { motion } from "framer-motion"; // Importing framer-motion
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { FaEnvelope, FaMapPin, FaPhone } from "react-icons/fa"; // Importing icons from react-icons
 
-export default function ContactPage() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitSuccessful, isSubmitting }
-  } = useForm({
-    mode: "onTouched"
-  });
+export default function Contact() {
 
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [message, setMessage] = useState("");
-
-  // Web3Forms API key
-  const apiKey = "7d8db944-b7c1-4c30-b1d3-1f1f1c0cf9ab";
-
-  const { submit: onSubmit } = useWeb3Forms({
-    access_key: apiKey,
-    settings: {
-      from_name: "SATravelcations",
-      subject: "New Contact Message from SATravelcations Website"
-    },
-    onSuccess: (msg, data) => {
-      setIsSuccess(true);
-      setMessage(msg);
-      reset(); // Reset form after submission
-    },
-    onError: (msg, data) => {
-      setIsSuccess(false);
-      setMessage(msg);
-    }
-  });
 
   return (
     <div className="container mx-auto px-6 py-2 lg:py-6">
