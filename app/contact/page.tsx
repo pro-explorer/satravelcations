@@ -1,4 +1,5 @@
 import Contact from "components/contact";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Contact SA Travelcations | Plan Your Dream Adventure",

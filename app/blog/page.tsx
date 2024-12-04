@@ -4,6 +4,7 @@ import { BlogPostsPagination } from 'components/BlogPostsPagination';
 import Headline from 'components/ui/headline';
 import { motion } from 'framer-motion';
 import { wisp } from 'lib/wisp';
+import { Metadata } from 'next';
 import BlogHero from './hero';
 
 export const metadata: Metadata = {

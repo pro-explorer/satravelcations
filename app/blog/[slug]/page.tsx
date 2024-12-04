@@ -7,7 +7,6 @@ import { wisp } from "lib/wisp";
 import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
 
-
 export async function generateMetadata({
   params: { slug },
 }: {

@@ -1,5 +1,6 @@
 
 import Destinations from "components/destinations";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Explore Destinations | SA Travelcations",
