@@ -1,11 +1,22 @@
-'use client';
-
 import { CarouselClient } from 'components/Carousel/Carousel';
 import Features3 from 'components/widgets/Features3';
 import OurAchievements from 'components/widgets/our-achievements';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AboutHero from './hero';
+
+
+export const metadata: Metadata = {
+  title: "SA Travelcations | Your Adventure Starts Here",
+  description:
+    "Discover SA Travelcations, your trusted partner in creating unforgettable travel experiences. From luxurious escapes to adventurous getaways, we tailor every journey to your needs.",
+  keywords:
+    "SA Travelcations, travel agency, adventure blog, luxury escapes, romantic getaways, family vacations, South Africa travel, travel planning, customized travel",
+  authors: [],
+  robots: "index, follow",
+};
+
+
 
 const slideInFadeIn = {
   hidden: { opacity: 0, y: '60%' }, // Start off invisible and below

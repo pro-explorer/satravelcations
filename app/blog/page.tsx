@@ -1,10 +1,22 @@
-'use client';
+
 import { BlogPostsPreview } from 'components/BlogPostPreview';
 import { BlogPostsPagination } from 'components/BlogPostsPagination';
 import Headline from 'components/ui/headline';
 import { motion } from 'framer-motion';
 import { wisp } from 'lib/wisp';
 import BlogHero from './hero';
+
+export const metadata: Metadata = {
+  title: "SA Travelcations Blogs | Inspiring Your Next Journey",
+  description:
+    "Explore the SA Travelcations blog for travel inspiration, tips, and guides. From adventure stories to destination highlights, we bring you the best of travel insights.",
+  keywords:
+    "SA Travelcations blog, travel tips, adventure stories, travel inspiration, destination guides, South Africa travel, travel agency blog, travel planning, luxury travel blogs",
+  authors: [],
+  robots: "index, follow",
+};
+
+
 
 // Define the animation variants for the headline
 const slideInFadeInVariants = {

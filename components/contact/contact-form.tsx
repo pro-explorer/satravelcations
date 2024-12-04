@@ -3,6 +3,7 @@
 import useWeb3Forms from "@web3forms/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+
 export default function ContactForm() {
   const {
     register,
@@ -39,7 +40,6 @@ export default function ContactForm() {
 
   return (
    
-     
         <>
           <form onSubmit={handleSubmit(onSubmit)} className="my-10">
             <input

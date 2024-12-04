@@ -99,7 +99,7 @@ export default async function Footer() {
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>
-           Designed and Developed by{" "}
+          Crafted with Excellence by{" "}
            <Link target= "_blank" href={siteMetadata.author_url}>Pro</Link>
            </p>
           <div className="md:ml-auto">

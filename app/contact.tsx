@@ -1,6 +1,6 @@
 "use client";
 
-import ContactForm from "components/widgets/contact-form";
+import ContactForm from "components/contact/contact-form";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
