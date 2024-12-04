@@ -3,6 +3,7 @@
 import { CarouselClient } from 'components/Carousel/Carousel';
 import Features3 from 'components/widgets/Features3';
 import OurAchievements from 'components/widgets/our-achievements';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AboutHero from './hero';
 
