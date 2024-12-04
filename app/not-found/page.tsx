@@ -1,35 +1,29 @@
 import Footer from "components/layout/footer";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import NotFound from "components/not-found";
 
 export async function generateMetadata() {
   return {
-    title: "404",
-    description: "Something went wrong",
+    title: "Page Not Found | SA Travelcations",
+    description:
+      "Oops! The page you’re looking for doesn’t exist. Return to SA Travelcations and continue planning your next adventure.",
+    keywords:
+      "SA Travelcations 404, page not found, error page, travel agency, adventure blog, South Africa travel",
+    authors: [],
+    robots: "noindex, follow",
   };
 }
 
-export default function NotFound() {
+
+
+
+
+
+
+export default function NotFoundPage() {
 
   return (
     <>
-     <div className="flex flex-col gap-4 items-center justify-center min-h-[calc(100vh-64px)]">
-      <h1 className="text-2xl-semi text-ui-fg-base">Page not found</h1>
-      <p className="text-small-regular text-ui-fg-base">
-        The page you tried to access does not exist.
-      </p>
-      <Link
-        className="flex gap-x-1 items-center group"
-        href="/"
-      >
-        <p className="text-ui-fg-interactive">Go to frontpage</p>
-        <ArrowUpRight
-          className="group-hover:rotate-45 ease-in-out duration-150"
-          color="var(--fg-interactive)"
-        />
-      </Link>
-    </div>
-
+     <NotFound/>
       <Footer />
     </>
   );

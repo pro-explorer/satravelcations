@@ -9,12 +9,26 @@ import { BlogHighlightedPosts } from './highlighted-posts';
 import { TopDestinations } from './top-destinations';
 
 export const metadata = {
+  title: "SA Travelcations | Your Gateway to Unforgettable Adventures",
   description:
-    'Explore South Africa with us. Tailor-made Travel Experiences for You. Experience the art of luxury travel with expertly curated experiences. Unwind in style, from lavish resorts to exclusive escapes!',
+    "Discover South Africa and beyond with SA Travelcations. From luxury escapes to adventurous getaways, we create tailor-made travel experiences just for you. Start your dream journey today!",
+  keywords:
+    "SA Travelcations, travel agency, South Africa travel, luxury travel, customized travel experiences, adventure getaways, romantic escapes, family vacations",
   openGraph: {
-    type: 'website'
-  }
+    type: 'website',
+    title: "SA Travelcations | Your Gateway to Unforgettable Adventures",
+    description:
+      "Discover South Africa and beyond with SA Travelcations. From luxury escapes to adventurous getaways, we create tailor-made travel experiences just for you. Start your dream journey today!",
+    url: "https://www.satravelcations.com",
+    images: [
+      {
+        url: "https://www.satravelcations.com/images/hero.jpg",
+        alt: "A stunning view of South African landscapes",
+      },
+    ],
+  },
 };
+
 
 export default function HomePage() {
   return (
