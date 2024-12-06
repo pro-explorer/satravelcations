@@ -19,10 +19,10 @@ export const metadata = {
     title: "SA Travelcations | Your Gateway to Unforgettable Adventures",
     description:
       "Discover South Africa and beyond with SA Travelcations. From luxury escapes to adventurous getaways, we create tailor-made travel experiences just for you. Start your dream journey today!",
-    url: "https://www.satravelcations.com",
+    url: "https://www.satravelcations.co.zw",
     images: [
       {
-        url: "https://www.satravelcations.com/images/hero.jpg",
+        url: "/images/logo/logo.svg",
         alt: "A stunning view of South African landscapes",
       },
     ],
