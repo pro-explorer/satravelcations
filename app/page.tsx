@@ -22,7 +22,7 @@ export const metadata = {
     url: "https://www.satravelcations.co.zw",
     images: [
       {
-        url: "/images/logo/logo.svg",
+        url: "/images/favicon.ico",
         alt: "A stunning view of South African landscapes",
       },
     ],
