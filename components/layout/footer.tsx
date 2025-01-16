@@ -100,7 +100,7 @@ export default async function Footer() {
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>
           Crafted with Excellence by{" "}
-           <Link target= "_blank" href={siteMetadata.author_url}>Pro</Link>
+           <Link target= "_blank" href={siteMetadata.author_url}>{siteMetadata.author}</Link>
            </p>
           <div className="md:ml-auto">
             <ThemeSwitch />
