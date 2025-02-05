@@ -44,18 +44,25 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
   return (
     <html lang="en" className={GeistSans.variable}>
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <head>
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+        <meta
+          name="google-site-verification"
+          content="DlfQEBUPKxYaNh3fm33h8SJ575zxc5CbQW3wyN01CTM"
+        />
+      </head>
+
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ScrollToTopButton />
-    <Chatbot/>
+        <Chatbot />
         <ThemeProviders>
           <CartProvider cartPromise={cart}>
             <Navbar />
             <main>
               {children}
               <Toaster closeButton />
-              {  /*  <WelcomeToast />*/ }
+              {/*  <WelcomeToast />*/}
             </main>
           </CartProvider>
         </ThemeProviders>
